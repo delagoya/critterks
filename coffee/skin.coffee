@@ -38,40 +38,22 @@ shapeShadow = {
 }
 
 moveHighlight = {
-  'stroke-width': 4
+  'stroke-width': 2
   stroke: "#555"
   'stroke-dasharray': "-"
 }
 
 moveStart = (x,y,e) -> 
-  # console.log(this)
-  this.shadow.remove()
-  this.attr(moveHighlight)
-
-shapeMoveMove = (dx,dy,x,y,e) -> 
-  this.attr({
-    cx: e.offsetX, 
-    cy: e.offsetY, 
-    x:  e.offsetX - (this.attrs.width / 2),
-    y:  e.offsetY - (this.attrs.height / 2 ), 
-    r: this.attrs.r 
-  })
-  this.ox = dx
-  this.oy = dy
-
-# path move
-pathMoveStart = (x,y,e) -> 
   this.shadow.remove()
   this.attr(moveHighlight)
   this.pox = 0
   this.poy = 0
 
-pathMoveMove = (dx,dy,x,y,e) -> 
+moveMove = (dx,dy,x,y,e) -> 
   this.attr({transform: "...T#{dx - this.pox},#{dy - this.poy}" })
   this.pox = dx
   this.poy = dy
 
-# pathMoveEnd = (e) -> 
 moveEnd = (e)  -> 
   this.shadow = this.glow(shapeShadow)
   this.attr({stroke: 'none', 'stroke-width': 0})
@@ -114,11 +96,6 @@ moveSmallPhoneStart = ->
 
 moveSmallPhoneEnd = (e) -> 
   bigSkin.attr({fill: "url(images/swatches/#{skinColors[currSkinIndex]}.jpg)"})
-  # }, 100, "")
-  # bigSkin.animate({
-  #   fill: "url(images/swatches/#{skinColors[currSkinIndex]}.jpg)"
-  # }, 100, "")
-  # console.log("url(images/swatches/#{skinColors[currSkinIndex]}.jpg)")
 
 moveSmallPhoneMove = () -> 
   smallPhone.animate({
@@ -154,14 +131,14 @@ bigEyes = []
 for x in [0..2]
   e  = paper.circle(200 + (x * 2),400,60).attr(whiteFill)
   e.shadow = e.glow(shapeShadow)
-  e.drag(pathMoveMove,pathMoveStart,moveEnd)
+  e.drag(moveMove,moveStart,moveEnd)
   bigEyes[x] = e
 
 smallEyes = []
 for x in [0..2]
   e  = paper.circle(320 + (x * 2),385,40).attr(whiteFill)
   e.shadow = e.glow(shapeShadow)
-  e.drag(shapeMoveMove,moveStart,moveEnd)
+  e.drag(moveMove,moveStart,moveEnd)
   smallEyes[x] = e
 
 pupils = []
@@ -169,7 +146,7 @@ pupils = []
 for x in [0..3]
   e = paper.circle(390 + x,400,20 ).attr({fill: "url(images/swatches/black.jpg)", stroke: 'none'})
   e.shadow = e.glow(shapeShadow)
-  e.drag(shapeMoveMove,moveStart,moveEnd)
+  e.drag(moveMove,moveStart,moveEnd)
   pupils[x] = e
 # big red
 for x in [0..3]
@@ -177,19 +154,19 @@ for x in [0..3]
     fill: "url(images/swatches/red.jpg)", 
     stroke: 'none'})
   e.shadow = e.glow(shapeShadow)
-  e.drag(shapeMoveMove,moveStart,moveEnd)
+  e.drag(moveMove,moveStart,moveEnd)
   pupils[x] = e
 # small black 
 for x in [0..3]
   e = paper.circle(390 + x,360,10 ).attr({fill: "url(images/swatches/black.jpg)", stroke: 'none'})
   e.shadow = e.glow(shapeShadow)
-  e.drag(shapeMoveMove,moveStart,moveEnd)
+  e.drag(moveMove,moveStart,moveEnd)
   pupils[x] = e
 # small red
 for x in [0..3]
   e = paper.circle(430 + x,410,10 ).attr({fill: "url(images/swatches/red.jpg)", stroke: 'none'})
   e.shadow = e.glow(shapeShadow)
-  e.drag(shapeMoveMove,moveStart,moveEnd)
+  e.drag(moveMove,moveStart,moveEnd)
   pupils[x] = e
 ## Mouths
 # line (2)
@@ -197,12 +174,12 @@ mouths = []
 for x in [0,1]
   e = paper.rect(380, 450 + (x * 15),200,10,5).attr({fill: "url(images/swatches/red.jpg)", stroke: 'none'})
   e.shadow = e.glow(shapeShadow)
-  e.drag(shapeMoveMove,moveStart,moveEnd)
+  e.drag(moveMove,moveStart,moveEnd)
   mouths[x] = e
 # oval (1)
 mouths[2] = paper.ellipse(320,460,50,30).attr({fill: "url(images/swatches/red.jpg)", stroke: 'none'})
 mouths[2].shadow = mouths[2].glow(shapeShadow)
-mouths[2].drag(shapeMoveMove,moveStart,moveEnd)
+mouths[2].drag(moveMove,moveStart,moveEnd)
 
 ## Teeth
 # pointy teeth
@@ -210,7 +187,7 @@ pointyTeeth = []
 for x in [0..4]
   e = paper.pointyTooth( 480 + (x * 40) , 360).attr(whiteFill)
   e.shadow = e.glow(shapeShadow)
-  e.drag(pathMoveMove,pathMoveStart,moveEnd)
+  e.drag(moveMove,moveStart,moveEnd)
   pointyTeeth[x] = e
 
 # square teeth
@@ -218,5 +195,5 @@ squareTeeth = []
 for x in [0..4]
   e = paper.squareTooth(465 + (x * 40), 400).attr(whiteFill)
   e.shadow = e.glow(shapeShadow)
-  e.drag(pathMoveMove,pathMoveStart,moveEnd)
+  e.drag(moveMove,moveStart,moveEnd)
   squareTeeth[x] = e

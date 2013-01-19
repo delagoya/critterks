@@ -1,4 +1,4 @@
-var bigEyes, bigPhone, bigSkin, bigSkinPath, blackFill, currSkinIndex, e, form, mouths, moveEnd, moveHighlight, moveSmallPhoneEnd, moveSmallPhoneMove, moveSmallPhoneStart, moveStart, paper, pathMoveMove, pathMoveStart, pointyTeeth, pupils, redFill, shapeMoveMove, shapeShadow, skinColors, skinPos, smallEyes, smallPhone, smallSkinPath, smallSkins, squareTeeth, ss, verticalOffset, verticalSpacer, whiteFill, x, _i, _len, _ref;
+var bigEyes, bigPhone, bigSkin, bigSkinPath, blackFill, currSkinIndex, e, form, mouths, moveEnd, moveHighlight, moveMove, moveSmallPhoneEnd, moveSmallPhoneMove, moveSmallPhoneStart, moveStart, paper, pointyTeeth, pupils, redFill, shapeShadow, skinColors, skinPos, smallEyes, smallPhone, smallSkinPath, smallSkins, squareTeeth, ss, verticalOffset, verticalSpacer, whiteFill, x, _i, _len, _ref;
 
 paper = Raphael("skin", 860, 600);
 
@@ -37,36 +37,19 @@ shapeShadow = {
 };
 
 moveHighlight = {
-  'stroke-width': 4,
+  'stroke-width': 2,
   stroke: "#555",
   'stroke-dasharray': "-"
 };
 
 moveStart = function(x, y, e) {
   this.shadow.remove();
-  return this.attr(moveHighlight);
-};
-
-shapeMoveMove = function(dx, dy, x, y, e) {
-  this.attr({
-    cx: e.offsetX,
-    cy: e.offsetY,
-    x: e.offsetX - (this.attrs.width / 2),
-    y: e.offsetY - (this.attrs.height / 2),
-    r: this.attrs.r
-  });
-  this.ox = dx;
-  return this.oy = dy;
-};
-
-pathMoveStart = function(x, y, e) {
-  this.shadow.remove();
   this.attr(moveHighlight);
   this.pox = 0;
   return this.poy = 0;
 };
 
-pathMoveMove = function(dx, dy, x, y, e) {
+moveMove = function(dx, dy, x, y, e) {
   this.attr({
     transform: "...T" + (dx - this.pox) + "," + (dy - this.poy)
   });
@@ -153,7 +136,7 @@ bigEyes = [];
 for (x = 0; x <= 2; x++) {
   e = paper.circle(200 + (x * 2), 400, 60).attr(whiteFill);
   e.shadow = e.glow(shapeShadow);
-  e.drag(pathMoveMove, pathMoveStart, moveEnd);
+  e.drag(moveMove, moveStart, moveEnd);
   bigEyes[x] = e;
 }
 
@@ -162,7 +145,7 @@ smallEyes = [];
 for (x = 0; x <= 2; x++) {
   e = paper.circle(320 + (x * 2), 385, 40).attr(whiteFill);
   e.shadow = e.glow(shapeShadow);
-  e.drag(shapeMoveMove, moveStart, moveEnd);
+  e.drag(moveMove, moveStart, moveEnd);
   smallEyes[x] = e;
 }
 
@@ -174,7 +157,7 @@ for (x = 0; x <= 3; x++) {
     stroke: 'none'
   });
   e.shadow = e.glow(shapeShadow);
-  e.drag(shapeMoveMove, moveStart, moveEnd);
+  e.drag(moveMove, moveStart, moveEnd);
   pupils[x] = e;
 }
 
@@ -184,7 +167,7 @@ for (x = 0; x <= 3; x++) {
     stroke: 'none'
   });
   e.shadow = e.glow(shapeShadow);
-  e.drag(shapeMoveMove, moveStart, moveEnd);
+  e.drag(moveMove, moveStart, moveEnd);
   pupils[x] = e;
 }
 
@@ -194,7 +177,7 @@ for (x = 0; x <= 3; x++) {
     stroke: 'none'
   });
   e.shadow = e.glow(shapeShadow);
-  e.drag(shapeMoveMove, moveStart, moveEnd);
+  e.drag(moveMove, moveStart, moveEnd);
   pupils[x] = e;
 }
 
@@ -204,7 +187,7 @@ for (x = 0; x <= 3; x++) {
     stroke: 'none'
   });
   e.shadow = e.glow(shapeShadow);
-  e.drag(shapeMoveMove, moveStart, moveEnd);
+  e.drag(moveMove, moveStart, moveEnd);
   pupils[x] = e;
 }
 
@@ -218,7 +201,7 @@ for (_i = 0, _len = _ref.length; _i < _len; _i++) {
     stroke: 'none'
   });
   e.shadow = e.glow(shapeShadow);
-  e.drag(shapeMoveMove, moveStart, moveEnd);
+  e.drag(moveMove, moveStart, moveEnd);
   mouths[x] = e;
 }
 
@@ -229,14 +212,14 @@ mouths[2] = paper.ellipse(320, 460, 50, 30).attr({
 
 mouths[2].shadow = mouths[2].glow(shapeShadow);
 
-mouths[2].drag(shapeMoveMove, moveStart, moveEnd);
+mouths[2].drag(moveMove, moveStart, moveEnd);
 
 pointyTeeth = [];
 
 for (x = 0; x <= 4; x++) {
   e = paper.pointyTooth(480 + (x * 40), 360).attr(whiteFill);
   e.shadow = e.glow(shapeShadow);
-  e.drag(pathMoveMove, pathMoveStart, moveEnd);
+  e.drag(moveMove, moveStart, moveEnd);
   pointyTeeth[x] = e;
 }
 
@@ -245,6 +228,6 @@ squareTeeth = [];
 for (x = 0; x <= 4; x++) {
   e = paper.squareTooth(465 + (x * 40), 400).attr(whiteFill);
   e.shadow = e.glow(shapeShadow);
-  e.drag(pathMoveMove, pathMoveStart, moveEnd);
+  e.drag(moveMove, moveStart, moveEnd);
   squareTeeth[x] = e;
 }
