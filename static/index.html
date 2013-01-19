@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <!-- CSS Style sheets -->
+    <link href='css/960_12_col.css' rel='stylesheet' type='text/css' />
+    <!-- %link(rel="stylesheet" type="text/css" href="css/grid.css") -->
+    <link href='css/text.css' rel='stylesheet' type='text/css' />
+    <link href='css/reset.css' rel='stylesheet' type='text/css' />
+    <link href='css/app.css' rel='stylesheet' type='text/css' />
+    <!-- Javascript includes -->
+  </head>
+  <body>
+    <div class='container_12' id='container'>
+      <div class='grid_12' id='header'>
+        <div class='grid_8' id='logo'></div>
+        <div class='grid_3' id='kickstarter'></div>
+      </div>
+      <div class='grid_12' id='content'>
+        <div class='grid_9 alpha' id='skin'></div>
+        <!-- #sharelinks.push_2.grid_1.omega -->
+        <!-- Share the <3: -->
+        <!-- %img(src="images/fb.png") -->
+        <!-- %br -->
+        <!-- %img(src="images/tw.png") -->
+        <!-- %br -->
+        <!-- %img(src="images/gp.png") -->
+        <!-- %br -->
+        <div class='grid_3 omega' id='rightPanel'></div>
+      </div>
+      <div class='grid_12' id='footer'>
+        <div class='center'>&copy; Copyright 2013,  Turaro, LLC, and CritterKins. All Rights Reserved.</div>
+      </div>
+      <div class='grid_12 alpha omega' id='testForm'>
+        <form action='/' id='frmCritter' name='frmCritter'>
+          <input name='skinColor' type='hidden' value='0' />
+        </form>
+      </div>
+    </div>
+    <script type='text/javascript'>
+      document.write('<script src=js/' +
+      ('__proto__' in {} ? 'zepto' : 'jquery-1.9.0') +
+      '.js><\/script>')
+    </script>
+    <script src='js/raphael.js' type='text/javascript'></script>
+    <script src='js/shapes.js' type='text/javascript'></script>
+    <script src='js/ks.js' type='text/javascript'></script>
+    <script src='js/logo.js' type='text/javascript'></script>
+    <script src='js/skin.js' type='text/javascript'></script>
+  </body>
+</html>
