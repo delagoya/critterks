@@ -1,0 +1,66 @@
+@import "compass";
+
+body {
+  background-image: image-url("swatches/cream.jpg");
+  font-family: "Helvetica Neue", Helvetica, serif;
+}
+$default-box-shadow-color: #888;
+$default-box-shadow-h-offset: 1px;
+$default-box-shadow-v-offset: 1px;
+
+#container{
+  @include box-shadow();
+  background-image: image-url("swatches/white.jpg");
+}
+
+#header {
+  @include box-shadow();
+  margin-top: 10px;
+  margin-bottom: 25px;
+  background-image: image-url("swatches/blue.jpg");
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#footer {
+  // @extend #header;
+  // margin-top: 20px;
+  // margin-bottom: 0;
+  background-image: image-url("swatches/blue.jpg");
+  @include box-shadow();
+  text-align: center;
+  font-weight: normal;
+  font-size: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+// #sharelinks {
+//   img {
+//     margin: 5px;
+//     height: 50px;
+//     @include box-shadow();
+//   }
+// }
+
+#skin {
+  // background-image: image-url("iphone4.png");
+  background-repeat: no-repeat;
+  height: 640px;
+  // border: 1px dashed #777;
+}
+
+#content {
+  // border: 1px dashed #777;  
+}
+
+#rightPanel {
+  height: 640px;
+  @include box-shadow();
+  // background-image: image-url("swatches/yellow.jpg");
+  // border: 1px dashed #777;
+}
