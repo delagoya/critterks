@@ -81,7 +81,6 @@ currSkinIndex =  Number(form.skinColor.value)
 # iphone
 bigPhone = paper.image("images/iphone4.png",80,0,620,320)
 smallPhone = paper.image("images/iphone4.png",0,verticalOffset - 2,63,33)
-# move the smallPhone when a new color is clicked
 
 
 bigSkin = paper.path(bigSkinPath)
@@ -89,6 +88,8 @@ bigSkin = paper.path(bigSkinPath)
     fill: "url(images/swatches/#{skinColors[currSkinIndex]}.jpg)",
     stroke: "none"}).transform("t93,12")
 
+# Functions to move the smallPhone and
+# change the big skin color when a new color is clicked
 moveSmallPhoneStart = ->
   return if currSkinIndex == this.index
   currSkinIndex = this.index
