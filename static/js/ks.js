@@ -26,9 +26,9 @@ paper.text(69, 10, "find out more @").attr(fw);
 paper.rect(105, 23, 180, 30, 5).attr(fs).transform("t0,1");
 
 paper.rect(105, 23, 180, 30, 5).attr(fw).attr({
-  href: "http://www.kickstarter.com/projects/crittercase/1771170582"
+  href: "http://www.kickstarter.com/projects/crittercase/1771170582?token=f181f8c4"
 });
 
 paper.image("images/kickstarter.png", 110, 28, 170, 20).attr({
-  href: "http://www.kickstarter.com/projects/crittercase/1771170582"
+  href: "http://www.kickstarter.com/projects/crittercase/1771170582?token=f181f8c4"
 });
