@@ -1,4 +1,4 @@
-var bigEyes, bigPhone, bigSkin, bigSkinPath, blackFill, currSkinIndex, e, form, mouths, moveEnd, moveHighlight, moveMove, moveSmallPhoneEnd, moveSmallPhoneMove, moveSmallPhoneStart, moveStart, paper, pointyTeeth, pupils, redFill, shapeShadow, skinColors, skinPos, smallEyes, smallPhone, smallSkinPath, smallSkins, squareTeeth, ss, verticalOffset, verticalSpacer, whiteFill, x, _i, _len, _ref;
+var bigEyes, bigPhone, bigSkin, bigSkinPath, blackFill, currSkinIndex, e, form, mouths, moveEnd, moveHighlight, moveMove, moveSmallPhoneEnd, moveSmallPhoneMove, moveSmallPhoneStart, moveStart, paper, pointyTeeth, pupils, redFill, shapeShadow, skinColors, skinPos, smallEyes, smallPhone, smallSkinPath, smallSkins, squareTeeth, ss, verticalOffset, verticalSpacer, whiteFill, x, _i, _j, _len, _len2, _ref, _ref2;
 
 paper = Raphael("skin", 860, 600);
 
@@ -203,6 +203,17 @@ for (_i = 0, _len = _ref.length; _i < _len; _i++) {
   e.shadow = e.glow(shapeShadow);
   e.drag(moveMove, moveStart, moveEnd);
   mouths[x] = e;
+}
+
+_ref2 = [0, 1];
+for (_j = 0, _len2 = _ref2.length; _j < _len2; _j++) {
+  x = _ref2[_j];
+  e = paper.rect(380, 480 + (x * 15), 200, 10, 5).attr({
+    fill: "url(images/swatches/black.jpg)",
+    stroke: 'none'
+  });
+  e.shadow = e.glow(shapeShadow);
+  e.drag(moveMove, moveStart, moveEnd);
 }
 
 mouths[2] = paper.ellipse(320, 460, 50, 30).attr({

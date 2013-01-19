@@ -170,13 +170,20 @@ for x in [0..3]
   e.drag(moveMove,moveStart,moveEnd)
   pupils[x] = e
 ## Mouths
-# line (2)
+# red line (2)
 mouths = []
 for x in [0,1]
   e = paper.rect(380, 450 + (x * 15),200,10,5).attr({fill: "url(images/swatches/red.jpg)", stroke: 'none'})
   e.shadow = e.glow(shapeShadow)
   e.drag(moveMove,moveStart,moveEnd)
   mouths[x] = e
+# black line (2)
+for x in [0,1]
+  e = paper.rect(380, 480 + (x * 15),200,10,5).attr({fill: "url(images/swatches/black.jpg)", stroke: 'none'})
+  e.shadow = e.glow(shapeShadow)
+  e.drag(moveMove,moveStart,moveEnd)
+  # mouths[x] = e
+
 # oval (1)
 mouths[2] = paper.ellipse(320,460,50,30).attr({fill: "url(images/swatches/red.jpg)", stroke: 'none'})
 mouths[2].shadow = mouths[2].glow(shapeShadow)
