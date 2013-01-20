@@ -152,40 +152,28 @@ for (x = 0; x <= 2; x++) {
 pupils = [];
 
 for (x = 0; x <= 3; x++) {
-  e = paper.circle(390 + x, 400, 20).attr({
-    fill: "url(images/swatches/black.jpg)",
-    stroke: 'none'
-  });
+  e = paper.circle(390 + x, 400, 20).attr(blackFill);
   e.shadow = e.glow(shapeShadow);
   e.drag(moveMove, moveStart, moveEnd);
   pupils[x] = e;
 }
 
 for (x = 0; x <= 3; x++) {
-  e = paper.circle(430 + x, 370, 20).attr({
-    fill: "url(images/swatches/red.jpg)",
-    stroke: 'none'
-  });
+  e = paper.circle(430 + x, 370, 20).attr(redFill);
   e.shadow = e.glow(shapeShadow);
   e.drag(moveMove, moveStart, moveEnd);
   pupils[x] = e;
 }
 
 for (x = 0; x <= 3; x++) {
-  e = paper.circle(390 + x, 360, 10).attr({
-    fill: "url(images/swatches/black.jpg)",
-    stroke: 'none'
-  });
+  e = paper.circle(390 + x, 360, 10).attr(blackFill);
   e.shadow = e.glow(shapeShadow);
   e.drag(moveMove, moveStart, moveEnd);
   pupils[x] = e;
 }
 
 for (x = 0; x <= 3; x++) {
-  e = paper.circle(430 + x, 410, 10).attr({
-    fill: "url(images/swatches/red.jpg)",
-    stroke: 'none'
-  });
+  e = paper.circle(430 + x, 410, 10).attr(redFill);
   e.shadow = e.glow(shapeShadow);
   e.drag(moveMove, moveStart, moveEnd);
   pupils[x] = e;
@@ -196,10 +184,7 @@ mouths = [];
 _ref = [0, 1];
 for (_i = 0, _len = _ref.length; _i < _len; _i++) {
   x = _ref[_i];
-  e = paper.rect(380, 450 + (x * 15), 200, 10, 5).attr({
-    fill: "url(images/swatches/red.jpg)",
-    stroke: 'none'
-  });
+  e = paper.rect(380, 450 + (x * 15), 200, 10, 5).attr(redFill);
   e.shadow = e.glow(shapeShadow);
   e.drag(moveMove, moveStart, moveEnd);
   mouths[x] = e;
@@ -208,18 +193,12 @@ for (_i = 0, _len = _ref.length; _i < _len; _i++) {
 _ref2 = [0, 1];
 for (_j = 0, _len2 = _ref2.length; _j < _len2; _j++) {
   x = _ref2[_j];
-  e = paper.rect(380, 480 + (x * 15), 200, 10, 5).attr({
-    fill: "url(images/swatches/black.jpg)",
-    stroke: 'none'
-  });
+  e = paper.rect(380, 480 + (x * 15), 200, 10, 5).attr(blackFill);
   e.shadow = e.glow(shapeShadow);
   e.drag(moveMove, moveStart, moveEnd);
 }
 
-mouths[2] = paper.ellipse(320, 460, 50, 30).attr({
-  fill: "url(images/swatches/red.jpg)",
-  stroke: 'none'
-});
+mouths[2] = paper.ellipse(320, 460, 50, 30).attr(redFill);
 
 mouths[2].shadow = mouths[2].glow(shapeShadow);
 

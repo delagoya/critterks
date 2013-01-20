@@ -22,7 +22,6 @@ redFill =  {
 
 blackFill =  {
   fill: "url(images/swatches/black.jpg)",
-
   stroke: "none",
   'stroke-width': 0 
 }
@@ -145,27 +144,25 @@ for x in [0..2]
 pupils = []
 # big black
 for x in [0..3]
-  e = paper.circle(390 + x,400,20 ).attr({fill: "url(images/swatches/black.jpg)", stroke: 'none'})
+  e = paper.circle(390 + x,400,20 ).attr(blackFill)
   e.shadow = e.glow(shapeShadow)
   e.drag(moveMove,moveStart,moveEnd)
   pupils[x] = e
 # big red
 for x in [0..3]
-  e = paper.circle(430 + x, 370,20 ).attr({
-    fill: "url(images/swatches/red.jpg)", 
-    stroke: 'none'})
+  e = paper.circle(430 + x, 370,20 ).attr(redFill)
   e.shadow = e.glow(shapeShadow)
   e.drag(moveMove,moveStart,moveEnd)
   pupils[x] = e
 # small black 
 for x in [0..3]
-  e = paper.circle(390 + x,360,10 ).attr({fill: "url(images/swatches/black.jpg)", stroke: 'none'})
+  e = paper.circle(390 + x,360,10 ).attr(blackFill)
   e.shadow = e.glow(shapeShadow)
   e.drag(moveMove,moveStart,moveEnd)
   pupils[x] = e
 # small red
 for x in [0..3]
-  e = paper.circle(430 + x,410,10 ).attr({fill: "url(images/swatches/red.jpg)", stroke: 'none'})
+  e = paper.circle(430 + x,410,10 ).attr(redFill)
   e.shadow = e.glow(shapeShadow)
   e.drag(moveMove,moveStart,moveEnd)
   pupils[x] = e
@@ -173,19 +170,19 @@ for x in [0..3]
 # red line (2)
 mouths = []
 for x in [0,1]
-  e = paper.rect(380, 450 + (x * 15),200,10,5).attr({fill: "url(images/swatches/red.jpg)", stroke: 'none'})
+  e = paper.rect(380, 450 + (x * 15),200,10,5).attr(redFill)
   e.shadow = e.glow(shapeShadow)
   e.drag(moveMove,moveStart,moveEnd)
   mouths[x] = e
 # black line (2)
 for x in [0,1]
-  e = paper.rect(380, 480 + (x * 15),200,10,5).attr({fill: "url(images/swatches/black.jpg)", stroke: 'none'})
+  e = paper.rect(380, 480 + (x * 15),200,10,5).attr(blackFill)
   e.shadow = e.glow(shapeShadow)
   e.drag(moveMove,moveStart,moveEnd)
   # mouths[x] = e
 
 # oval (1)
-mouths[2] = paper.ellipse(320,460,50,30).attr({fill: "url(images/swatches/red.jpg)", stroke: 'none'})
+mouths[2] = paper.ellipse(320,460,50,30).attr(redFill)
 mouths[2].shadow = mouths[2].glow(shapeShadow)
 mouths[2].drag(moveMove,moveStart,moveEnd)
 
