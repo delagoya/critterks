@@ -1,4 +1,4 @@
-var bigEyes, bigPhone, bigSkin, bigSkinPath, blackFill, currSkinIndex, e, form, mouths, moveEnd, moveHighlight, moveMove, moveSmallPhoneEnd, moveSmallPhoneMove, moveSmallPhoneStart, moveStart, paper, pointyTeeth, pupils, redFill, shapeShadow, skinColors, skinPos, smallEyes, smallPhone, smallSkinPath, smallSkins, squareTeeth, ss, verticalOffset, verticalSpacer, whiteFill, x, _i, _j, _len, _len2, _ref, _ref2;
+var bigEyes, bigPhone, bigSkin, bigSkinPath, bigSkins, blackFill, currSkinIndex, e, form, lastSkinIndex, mouths, moveEnd, moveHighlight, moveMove, moveSmallPhoneEnd, moveSmallPhoneMove, moveSmallPhoneStart, moveStart, paper, pointyTeeth, pupils, redFill, shapeShadow, skinColors, skinPos, smallEyes, smallPhone, smallSkinPath, smallSkins, squareTeeth, ss, verticalOffset, verticalSpacer, whiteFill, x, _i, _j, _len, _len2, _ref, _ref2;
 
 paper = Raphael("skin", 860, 600);
 
@@ -80,26 +80,25 @@ skinPos = (function() {
   return _results;
 })();
 
-currSkinIndex = Number(form.skinColor.value);
+lastSkinIndex = currSkinIndex = Number(form.skinColor.value);
 
 bigPhone = paper.image("images/iphone4.png", 80, 0, 620, 320);
 
 smallPhone = paper.image("images/iphone4.png", 0, verticalOffset - 2, 63, 33);
 
-bigSkin = paper.path(bigSkinPath).attr({
-  fill: "url(images/swatches/" + skinColors[currSkinIndex] + ".jpg)",
-  stroke: "none"
-}).transform("t93,12");
-
 moveSmallPhoneStart = function() {
   if (currSkinIndex === this.index) return;
+  lastSkinIndex = currSkinIndex;
   currSkinIndex = this.index;
   return moveSmallPhoneMove(this);
 };
 
 moveSmallPhoneEnd = function(e) {
-  return bigSkin.attr({
-    fill: "url(images/swatches/" + skinColors[currSkinIndex] + ".jpg)"
+  bigSkins[lastSkinIndex].attr({
+    opacity: 0
+  });
+  return bigSkins[currSkinIndex].attr({
+    opacity: 1
   });
 };
 
@@ -109,6 +108,22 @@ moveSmallPhoneMove = function() {
     y: smallSkins[currSkinIndex].y - 2
   }, 200, "", moveSmallPhoneEnd);
 };
+
+bigSkins = [];
+
+for (x = 0; x <= 7; x++) {
+  bigSkin = paper.path(bigSkinPath).attr({
+    fill: "url(images/swatches/" + skinColors[x] + ".jpg)",
+    stroke: "none",
+    opacity: 0
+  }).transform("t93,12");
+  if (currSkinIndex === x) {
+    bigSkin.attr({
+      opacity: 1
+    });
+  }
+  bigSkins[x] = bigSkin;
+}
 
 smallSkins = [];
 
@@ -131,13 +146,18 @@ paper.rect(80, 330, 620, 200, 20).attr({
   'stroke-width': 2
 }).glow(shapeShadow);
 
-bigEyes = [];
+e = paper.circle(200 + (x * 2), 400, 60).attr(whiteFill);
 
-for (x = 0; x <= 2; x++) {
-  e = paper.circle(200 + (x * 2), 400, 60).attr(whiteFill);
-  e.shadow = e.glow(shapeShadow);
-  e.drag(moveMove, moveStart, moveEnd);
-  bigEyes[x] = e;
+e.shadow = e.glow(shapeShadow);
+
+e.drag(moveMove, moveStart, moveEnd);
+
+bigEyes = [e];
+
+for (x = 1; x <= 2; x++) {
+  bigEyes[x] = e.clone();
+  bigEyes[x].transform("t1,0");
+  bigEyes[x].drag(moveMove, moveStart, moveEnd);
 }
 
 smallEyes = [];

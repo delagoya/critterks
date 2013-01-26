@@ -75,33 +75,41 @@ skinColors = [
 
 skinPos = (x * verticalSpacer for x in [0..7])
 # console.log(form.skinColor.value)
-currSkinIndex =  Number(form.skinColor.value)
+lastSkinIndex = currSkinIndex =  Number(form.skinColor.value)
 
 # iphone
 bigPhone = paper.image("images/iphone4.png",80,0,620,320)
 smallPhone = paper.image("images/iphone4.png",0,verticalOffset - 2,63,33)
 
 
-bigSkin = paper.path(bigSkinPath)
-  .attr({
-    fill: "url(images/swatches/#{skinColors[currSkinIndex]}.jpg)",
-    stroke: "none"}).transform("t93,12")
-
 # Functions to move the smallPhone and
 # change the big skin color when a new color is clicked
 moveSmallPhoneStart = ->
   return if currSkinIndex == this.index
+  lastSkinIndex = currSkinIndex
   currSkinIndex = this.index
   moveSmallPhoneMove(this)
 
 moveSmallPhoneEnd = (e) -> 
-  bigSkin.attr({fill: "url(images/swatches/#{skinColors[currSkinIndex]}.jpg)"})
+  bigSkins[lastSkinIndex].attr({opacity: 0})
+  bigSkins[currSkinIndex].attr({opacity: 1})
 
 moveSmallPhoneMove = () -> 
   smallPhone.animate({
     x: smallSkins[currSkinIndex].x - 2,
     y: smallSkins[currSkinIndex].y - 2,
   }, 200, "", moveSmallPhoneEnd)
+
+bigSkins = []
+for x in [0..7]
+  bigSkin = paper.path(bigSkinPath)
+    .attr({
+      fill: "url(images/swatches/#{skinColors[x]}.jpg)",
+      stroke: "none", 
+      opacity: 0}).transform("t93,12")
+  if currSkinIndex == x
+    bigSkin.attr({opacity: 1})
+  bigSkins[x] = bigSkin
 
 smallSkins = []
 for x in [0..7]
@@ -127,13 +135,14 @@ paper.rect(80,330,620,200,20).attr({
 }).glow(shapeShadow)
 
 ## Eyes
-bigEyes = []
-for x in [0..2]
-  e  = paper.circle(200 + (x * 2),400,60).attr(whiteFill)
-  e.shadow = e.glow(shapeShadow)
-  e.drag(moveMove,moveStart,moveEnd)
-  bigEyes[x] = e
-
+e  = paper.circle(200 + (x * 2),400,60).attr(whiteFill)
+e.shadow = e.glow(shapeShadow)
+e.drag(moveMove,moveStart,moveEnd)
+bigEyes = [e]
+for x in [1..2]
+  bigEyes[x] = e.clone()
+  bigEyes[x].transform("t1,0")
+  bigEyes[x].drag(moveMove,moveStart,moveEnd)
 smallEyes = []
 for x in [0..2]
   e  = paper.circle(320 + (x * 2),385,40).attr(whiteFill)
