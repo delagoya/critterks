@@ -22,6 +22,9 @@ $default-box-shadow-v-offset: 1px;
   font-weight: bold;
   padding-top: 5px;
   padding-bottom: 5px;
+  a {
+    text-decoration: none;
+  }
 }
 
 #footer {

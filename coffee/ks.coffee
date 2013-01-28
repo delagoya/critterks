@@ -1,5 +1,3 @@
-# c = require 'colors'
-
 fs = {
   'font-family': "Helvetica Neue",
   'font-weight': "bold",
@@ -7,16 +5,13 @@ fs = {
   fill: "#555",
   stroke: 'none',
   opacity: 0.5}
-
 fw = {
   'font-family': "Helvetica Neue",
   'font-weight': "bold",
   'font-size': 18,
   fill: "url(images/swatches/white.jpg)",
   stroke: 'none'}
-
 paper = Raphael("kickstarter", 300,60)
-
 paper.text(69,10,"find out more @").attr(fs).transform("t0,1")
 paper.text(69,10,"find out more @").attr(fw)
 paper.rect(105,23,180,30,5).attr(fs).transform("t0,1")

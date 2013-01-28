@@ -1,27 +1,25 @@
-var bigEyes, bigPhone, bigSkin, bigSkinPath, bigSkins, blackFill, currSkinIndex, e, form, lastSkinIndex, mouths, moveEnd, moveHighlight, moveMove, moveSmallPhoneEnd, moveSmallPhoneMove, moveSmallPhoneStart, moveStart, paper, pointyTeeth, pupils, redFill, shapeShadow, skinColors, skinPos, smallEyes, smallPhone, smallSkinPath, smallSkins, squareTeeth, ss, verticalOffset, verticalSpacer, whiteFill, x, _i, _j, _len, _len2, _ref, _ref2;
+var bigEyes, bigPhone, bigSkin, bigSkinPath, bigSkins, blackFill, currSkinIndex, e, lastSkinIndex, mouths, moveEnd, moveHighlight, moveMove, moveSmallPhoneEnd, moveSmallPhoneMove, moveSmallPhoneStart, moveStart, paper, pointyTeeth, pupils, redFill, shapeShadow, skinColors, skinPos, smallEyes, smallPhone, smallSkinPath, smallSkins, squareTeeth, ss, verticalOffset, verticalSpacer, whiteFill, x, _i, _j, _len, _len2, _ref, _ref2;
 
 paper = Raphael("skin", 860, 600);
-
-form = document.frmCritter;
 
 bigSkinPath = "M600,256.013C600,280.207,580.513,300,556.693,300H43.306C19.488,300,0,280.205,0,256.013V43.986 C0,19.795,19.488,0,43.306,0h513.385c23.82,0,43.307,19.795,43.307,43.986v212.027H600z M36.995,208.91 c-12.846,0-24.607,38.105-24.607,51.154c0,13.045,10.414,23.623,23.258,23.623c12.847,0,23.261-10.577,23.261-23.623 C58.908,247.016,49.842,208.91,36.995,208.91z";
 
 smallSkinPath = "M60,25.602C60,28.021,58.052,30,55.67,30H4.331C1.949,30,0,28.021,0,25.602V4.399C0,1.979,1.949,0,4.331,0 h51.338C58.052,0,60,1.979,60,4.399V25.602L60,25.602z M3.7,20.891c-1.285,0-2.461,3.811-2.461,5.116 c0,1.304,1.042,2.362,2.326,2.362s2.326-1.058,2.326-2.362C5.891,24.702,4.984,20.891,3.7,20.891z";
 
 whiteFill = {
-  fill: colors.white,
+  fill: "url(images/swatches/white.jpg)",
   stroke: "none",
   'stroke-width': 0
 };
 
 redFill = {
-  fill: colors.red,
+  fill: "url(images/swatches/red.jpg)",
   stroke: "none",
   'stroke-width': 0
 };
 
 blackFill = {
-  fill: colors.black,
+  fill: "url(images/swatches/black.jpg)",
   stroke: "none",
   'stroke-width': 0
 };
@@ -84,7 +82,7 @@ lastSkinIndex = currSkinIndex = Number(form.skinColor.value);
 
 bigPhone = paper.image("images/iphone4.png", 80, 0, 620, 320);
 
-smallPhone = paper.image("images/iphone4-sm.png", 0, verticalOffset - 2, 63, 32);
+smallPhone = paper.image("images/iphone4.png", 0, verticalOffset - 2, 63, 33);
 
 moveSmallPhoneStart = function() {
   if (currSkinIndex === this.index) return;

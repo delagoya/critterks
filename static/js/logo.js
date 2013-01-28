@@ -1,4 +1,4 @@
-var highlight, paper, red_fill, shadow, shadow_fill, shadow_small, white_fill;
+var paper, shadow, shadow_fill, shadow_small, white_fill;
 
 shadow = {
   width: 2,
@@ -21,24 +21,15 @@ shadow_small = {
 };
 
 white_fill = {
-  fill: "url(images/swatches/white.jpg)",
-  stroke: "none"
+  fill: colors.white,
+  stroke: "none",
+  href: "http://critterkins.com"
 };
 
 shadow_fill = {
   fill: "#555",
   opacity: 0.5,
   stroke: "none"
-};
-
-red_fill = {
-  fill: "url(images/swatches/red.jpg)",
-  stroke: "none"
-};
-
-highlight = {
-  stroke: "##b0bf5d",
-  "stroke-width": 2
 };
 
 paper = Raphael("logo", 300, 60);
@@ -68,6 +59,7 @@ paper.text(176, 28, "CritterKins").attr({
   'font-family': "Helvetica Neue",
   'font-weight': "bold",
   'font-size': 45,
-  fill: "url(images/swatches/white.jpg)",
-  stroke: 'none'
+  fill: colors.white,
+  stroke: 'none',
+  href: "http://critterkins.com"
 });
