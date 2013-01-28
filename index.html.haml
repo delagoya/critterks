@@ -11,20 +11,24 @@
     #container.container_12
       #header.grid_12
         #logo.grid_8
-          %img(src='images/swatches/white.jpg' style='display: none')
-          %a(href='/' alt='CritterKins.com')
-            %embed(src="images/logo-big.svg" type="image/svg+xml" )
-        #tagline.grid_3
+          %a(href='http://critterkins.com' alt='CritterKins.com')
+            != File.read("static/images/logo-big.svg")
+        #kickstarter.grid_3
+          %a(href="http://www.kickstarter.com/projects/crittercase/1771170582?token=f181f8c4" alt='Find out more at our Kickstarter Project site' style='text-decoration: none')
+            != File.read('static/images/findoutmore-ks.svg')
       #content.grid_12
         #skin.grid_8.alpha
         #info.grid_4.omega
       #footer.grid_12
         .center &copy; Copyright 2013,  Turaro, LLC, and CritterKins. All Rights Reserved.
+      #testForm.grid_12.alpha.omega
+        %form(action="/" name="frmCritter" id="frmCritter")
+          %input(type="hidden" name="skinColor" value="0")
     %script(type="text/javascript")
       document.write('<script src=js/' +
       ('__proto__' in {} ? 'zepto' : 'jquery-1.9.0') +
       '.js><\/script>')
     %script(type="text/javascript" src="js/raphael.js")
+    %script(type="text/javascript" src="js/colors.js")
     %script(type="text/javascript" src="js/shapes.js")
-    / %script(type="text/javascript" src="js/logo.js")    
-    %script(type="text/javascript" src="js/ks.js")
+    %script(type="text/javascript" src="js/skin.js")
