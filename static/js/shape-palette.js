@@ -6,7 +6,7 @@ $('#smallSkinsImg path').on('click tap', function(e) {
 });
 
 $('#bigPhone').on('gesturechange touchstart mousedown', function(e) {
-  $('#rotateMessage').text(e.rotation || e.type);
+  $('#rotateMessage').text("" + e.type + " : " + e.rotation);
   e.preventDefault();
   if (e.type === 'gesturechange') {
     return $(this.id).animate({
