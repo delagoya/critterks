@@ -6,6 +6,7 @@ $('#smallSkinsImg path').on('click tap', function(e) {
 });
 
 $('#bigPhone').on('gesturechange touchstart mousedown', function(e) {
+  e.preventDefault();
   this.animate({
     rotate: e.rotation
   }, 200, 'ease');
