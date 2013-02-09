@@ -5,8 +5,6 @@ $('#smallSkinsImg path').on('click tap', function(e) {
   }, 200, 'ease-in-out');
 });
 
-$('#bigPhone').on('gesturestart', function(e) {
-  return this.animate({
-    rotate: e.rotatation
-  }, 200, 'ease');
+$('#bigPhone').on('gesturestart touchstart mousedown', function(e) {
+  return $('#rotateMessage').text(e.rotation || e.type);
 });

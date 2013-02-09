@@ -37,7 +37,8 @@ $('#smallSkinsImg path').on(
     )
   )
 $('#bigPhone').on(
-  'gesturestart',
+  'gesturestart touchstart mousedown',
   (e) ->
-    this.animate({rotate: e.rotatation }, 200, 'ease')
+    # this.animate({rotate: e.rotatation }, 200, 'ease')
+    $('#rotateMessage').text(e.rotation || e.type)
   )

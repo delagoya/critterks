@@ -4,7 +4,8 @@ body {
   background-color: #fdfdf9;
 }
 div {
-  margin: 10px;
+  // margin: 10px;
+  margin-top: 10px;
   border: 1px solid #666;
   @include border-radius(5px);
   background-color: #fff5e1;
@@ -35,9 +36,14 @@ div {
   z-index: 1;
 }
 
-#rotateTest {
+#rotateTest{
   position: relative;
   width: 300px;
   height: 200px;
   float: left;
+}
+
+#rotateMessage {
+  width: 300px;
+  float: left;  
 }
