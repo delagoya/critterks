@@ -9,7 +9,7 @@ $('#bigPhone').on('gesturechange touchstart mousedown', function(e) {
   $('#rotateMessage').text("" + e.type + " : " + e.rotation);
   e.preventDefault();
   if (e.type === 'gesturechange') {
-    $("rotateMessage").insertAfer(this.id);
+    $("rotateMessage").insertAfer("#rotateMessage");
     return $(this.id).animate({
       rotate: e.rotation
     }, 200, 'linear');

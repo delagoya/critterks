@@ -42,6 +42,6 @@ $('#bigPhone').on(
     $('#rotateMessage').text("#{e.type} : #{e.rotation}")
     e.preventDefault()
     if (e.type == 'gesturechange')
-      $("rotateMessage").insertAfer(this.id)
+      $("<br/>#{$(this.id}").insertAfer("#rotateMessage")
       $(this.id).animate({rotate: e.rotation }, 200, 'linear')
   )
