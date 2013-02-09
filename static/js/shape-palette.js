@@ -6,9 +6,11 @@ $('#smallSkinsImg path').on('click tap', function(e) {
 });
 
 $('#bigPhone').on('gesturechange touchstart mousedown', function(e) {
+  $('#rotateMessage').text(e.rotation || e.type);
   e.preventDefault();
-  this.animate({
-    rotate: e.rotation
-  }, 200, 'ease');
-  return $('#rotateMessage').text(e.rotation || e.type);
+  if (e.type === 'gesturechange') {
+    return $(this.id).animate({
+      rotate: e.rotation
+    }, 200, 'linear');
+  }
 });

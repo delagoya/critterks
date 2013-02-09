@@ -39,7 +39,8 @@ $('#smallSkinsImg path').on(
 $('#bigPhone').on(
   'gesturechange touchstart mousedown',
   (e) ->
-    e.preventDefault()
-    this.animate({rotate: e.rotation }, 200, 'ease')
     $('#rotateMessage').text(e.rotation || e.type)
+    e.preventDefault()
+    if (e.type == 'gesturechange')
+      $(this.id).animate({rotate: e.rotation }, 200, 'linear')
   )
