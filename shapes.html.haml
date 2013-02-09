@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %link(rel="stylesheet" type="text/css" href="css/shapes.css")
+  %body
+    #logo
+    / #smallKs.ks
+    / #bigKs.ks
+    #smallSkins
+      %img(id='tinyIphone' src="images/iphone4-sm.png" )
+      != File.read('static/images/smallSkins.svg')  
+    / #bigSkin
+    %script(type="text/javascript" src="js/zepto.js")    
+    %script(type="text/javascript" src="js/raphael.js")
+    %script(type="text/javascript" src="js/colors.js")
+    %script(type="text/javascript" src="js/shapes.js")
+    %script(type="text/javascript" src="js/logo.js")
+    %script(type="text/javascript" src="js/shape-palette.js")
+

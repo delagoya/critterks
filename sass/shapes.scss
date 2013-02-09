@@ -1,0 +1,35 @@
+@import "compass";
+@import 'bourbon/bourbon';
+body {
+  background-color: #fdfdf9;
+}
+div {
+  margin: 10px;
+  border: 1px solid #666;
+  @include border-radius(5px);
+  background-color: #fff5e1;
+  width: 960px;
+}
+
+#logo, .ks {
+    background-color: #54b2a2;
+}
+
+#smallSkins {
+  position: relative;
+  height: 280px;
+  width: 65px;
+}
+
+#smallSkinsImg {
+  position: absolute;
+  left: 0px;
+  top: 2px;
+  z-index: 2;
+}
+#tinyIphone {
+  position: absolute;
+  // left: 10;
+  top: 0px;
+  z-index: 1;
+}

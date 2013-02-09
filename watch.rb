@@ -1,5 +1,2 @@
-require "watch"
-Watch.new("*.html.haml") do
-  system("haml index.html.haml > static/index.html")
-  system("haml lab.html.haml > static/lab.html")
-end
+require "watchr"
+watch('(.*\.html).haml')  {|md| system("haml -r 'coffee-filter' #{md[1]}.haml > static/#{md[1]}")}
