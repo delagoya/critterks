@@ -6,10 +6,8 @@ $('#smallSkinsImg path').on('click tap', function(e) {
 });
 
 $('#bigPhone').on('gesturechange touchstart mousedown', function(e) {
-  $('#rotateMessage').text("" + e.type + " : " + e.rotation);
-  e.preventDefault();
   if (e.type === 'gesturechange') {
-    $("rotateMessage").insertAfer("#rotateMessage");
+    $('#rotateMessage').text("" + e.type + " : " + e.rotation + " : " + this);
     return $(this.id).animate({
       rotate: e.rotation
     }, 200, 'linear');
