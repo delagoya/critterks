@@ -19,6 +19,7 @@ div {
   position: relative;
   height: 280px;
   width: 65px;
+  float: left;
 }
 
 #smallSkinsImg {
@@ -32,4 +33,11 @@ div {
   // left: 10;
   top: 0px;
   z-index: 1;
+}
+
+#rotateTest {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  float: left;
 }

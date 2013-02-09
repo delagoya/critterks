@@ -28,11 +28,16 @@
 #   ss.node.setAttribute("index", x)
 #   ss.node.setAttribute("topPosition", "#{verticalSpacer * x + verticalOffset}")
 #   ss.node.setAttribute("id", "smallSkin#{x}")
-$.each($('#smallSkinsImg path'),
-  (idx,item)-> 
-    console.log(idx,item.id)
-    $("##{item.id}").on('click tap', 
-      (e) -> 
-        $('#tinyIphone').animate({translate3d: "0,#{item.getAttribute('topposition')}px,0" }, 200, 'ease-in-out')
+$('#smallSkinsImg path').on(
+  'click tap',
+  (e) -> 
+    $('#tinyIphone').animate(
+      {translate3d: "0,#{this.getAttribute('topposition')}px,0" }, 
+      200, 'ease-in-out'
     )
-)
+  )
+$('#bigPhone').on(
+  'gesturestart',
+  (e) ->
+    this.animate({rotate: e.rotatation }, 200, 'ease')
+  )
