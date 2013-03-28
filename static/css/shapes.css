@@ -1,23 +1,24 @@
-/* line 3, ../../sass/shapes.scss */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic|Lato:700,900);
+/* line 6, ../../sass/shapes.scss */
 body { background-color: #fdfdf9; }
 
-/* line 6, ../../sass/shapes.scss */
+/* line 9, ../../sass/shapes.scss */
 div { margin-top: 10px; border: 1px solid #666666; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; background-color: #fff5e1; width: 960px; }
 
-/* line 15, ../../sass/shapes.scss */
-#logo, .ks { background-color: #54b2a2; }
+/* line 18, ../../sass/shapes.scss */
+#logo, .ks { font-family: "Source Sans Pro", sans-serif; font-family: "Lato", sans-serif; background-color: #54b2a2; }
 
-/* line 19, ../../sass/shapes.scss */
+/* line 24, ../../sass/shapes.scss */
 #smallSkins { position: relative; height: 280px; width: 65px; float: left; }
 
-/* line 26, ../../sass/shapes.scss */
+/* line 31, ../../sass/shapes.scss */
 #smallSkinsImg { position: absolute; left: 0px; top: 2px; z-index: 2; }
 
-/* line 32, ../../sass/shapes.scss */
+/* line 37, ../../sass/shapes.scss */
 #tinyIphone { position: absolute; top: 0px; z-index: 1; }
 
-/* line 39, ../../sass/shapes.scss */
+/* line 44, ../../sass/shapes.scss */
 #rotateTest { position: relative; width: 300px; height: 200px; float: left; }
 
-/* line 46, ../../sass/shapes.scss */
+/* line 51, ../../sass/shapes.scss */
 #rotateMessage { width: 300px; float: left; }
