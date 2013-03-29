@@ -22,3 +22,9 @@ div { margin-top: 10px; border: 1px solid #666; -webkit-border-radius: 5px; -moz
 
 /* line 51, ../../sass/shapes.scss */
 #rotateMessage { width: 300px; float: left; }
+
+/* line 56, ../../sass/shapes.scss */
+#bigPhone { position: absolute; top: 3px; left: 0; }
+
+/* line 61, ../../sass/shapes.scss */
+#bigPhone2 { position: absolute; top: 3px; left: 200px; }

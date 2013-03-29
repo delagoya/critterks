@@ -68,7 +68,7 @@ touchTransform = (e) ->
       # see if touch is on right side of the shape
       o.hm.rotation = o.hm.last_rotation + e.gesture.rotation
     when "release"
-      $("#bigPhone").animate({ border: "none"} , 300)
+      $(this).animate({ border: "none"} , 300)
       $(".fakeTouchPoint").animate({opacity: 0}, 300)
   $(this).animate({
     translate3d: "#{o.hm.posX }px,#{o.hm.posY}px,0",

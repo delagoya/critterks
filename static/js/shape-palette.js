@@ -34,7 +34,7 @@ touchTransform = function(e) {
       o.hm.rotation = o.hm.last_rotation + e.gesture.rotation;
       break;
     case "release":
-      $("#bigPhone").animate({
+      $(this).animate({
         border: "none"
       }, 300);
       $(".fakeTouchPoint").animate({
