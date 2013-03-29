@@ -18,7 +18,7 @@ div { margin-top: 10px; border: 1px solid #666; -webkit-border-radius: 5px; -moz
 #tinyIphone { position: absolute; top: 0px; z-index: 1; }
 
 /* line 44, ../../sass/shapes.scss */
-#rotateTest { position: relative; width: 300px; height: 200px; float: left; }
+#rotateTest { position: relative; width: 600px; height: 400px; float: left; }
 
 /* line 51, ../../sass/shapes.scss */
 #rotateMessage { width: 300px; float: left; }
