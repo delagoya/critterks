@@ -8,6 +8,10 @@
         // keeps the start position to keep it centered
         var start_pos = false;
 
+        // test for msMaxTouchPoints to enable this for IE10 with only one pointer (a mouse in all/most cases)
+        Hammer.HAS_POINTEREVENTS = navigator.msPointerEnabled &&
+            navigator.msMaxTouchPoints && navigator.msMaxTouchPoints >= 1;
+
         /**
          * overwrites Hammer.event.getTouchList.
          * @param   {Event}     ev
@@ -15,11 +19,12 @@
          * @return  {Array}     Touches
          */
         Hammer.event.getTouchList = function(ev, eventType) {
-            // Android, iOS etc
+            // get the fake pointerEvent touchlist
             if(Hammer.HAS_POINTEREVENTS) {
-                return Hammer.PointerEvent.getPointers();
+                return Hammer.PointerEvent.getTouchList();
             }
-            else if(Hammer.HAS_TOUCHEVENTS) {
+            // get the touchlist
+            else if(ev.touches) {
                 return ev.touches;
             }
 

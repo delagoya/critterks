@@ -30,9 +30,9 @@
 #   ss.node.setAttribute("id", "smallSkin#{x}")
 $('#smallSkinsImg path').on(
   'click tap',
-  (e) -> 
+  (e) ->
     $('#tinyIphone').animate(
-      {translate3d: "0,#{this.getAttribute('topposition')}px,0" }, 
+      {translate3d: "0,#{this.getAttribute('topposition')}px,0" },
       200, 'ease-in-out'
     )
   )
@@ -44,15 +44,15 @@ $('#smallSkinsImg path').on(
 #       $(this.id).animate({rotate: e.rotation }, 200, 'linear')
 #   )
 bp = Hammer($("#bigPhone")[0], {
-  scale: false, 
+  scale: false,
   transform_always_block: true,
-  drag_block_horizontal: true, 
+  drag_block_horizontal: true,
   drag_block_vertical: true
 })
 # Use the shift key to add in multi-touch and show them
-if(!Hammer.HAS_TOUCHEVENTS && !Hammer.HAS_POINTEREVENTS) 
+if(!Hammer.HAS_TOUCHEVENTS && !Hammer.HAS_POINTEREVENTS)
   Hammer.plugins.fakeMultitouch()
-  # Hammer.plugins.showTouches()
+  Hammer.plugins.showTouches()
 bp.h = {
   x: 0
   y: 0
@@ -60,13 +60,21 @@ bp.h = {
   dy: 0
   posX: 0
   posY: 0
-  last_touchX: 0 
-  last_touchY: 0 
-  rotation: 0 
+  last_touchX: 0
+  last_touchY: 0
+  rotation: 0
   last_rotation: 0
+  length: 10
 }
-bp.on(
-  "touch drag transform release", 
+
+getRotationDegrees = (ev,bp) ->
+  console.log(ev.gesture.center.pageX, bp.h.posX + (bp.element.width / 2))
+  if ev.gesture.center.pageX >= (bp.h.x + (bp.h.length / 2))
+    (1 - ev.gesture.rotation)
+  else
+    ev.gesture.rotation
+
+bp.on("touch drag transform release",
   (ev) ->
     switch ev.type
       when "touch"
@@ -86,14 +94,21 @@ bp.on(
         bp.h.last_touchX = bp.h.x
         bp.h.last_touchY = bp.h.y
       when "transform"
-        bp.h.rotation = bp.h.last_rotation + ev.gesture.rotation
-      when "release" 
-        $("#bigPhone").css("border", "none")
-    console.log(ev.gesture.center, bp.h)
-    console.log("translate3d(#{bp.h.posX}px,#{bp.h.posY}px,0) rotate(#{bp.h.rotation}deg) ")
+        # see if touch is on right side of the shape
+        bp.h.rotation = bp.h.last_rotation + getRotationDegrees(ev,bp)
+        console.log(bp.h.rotation)
+      when "release"
+        $("#bigPhone").animate({ border: "none"} , 300)
+        $(".fakeTouchPoint").animate({opacity: 0}, 300)
+    # console.log(ev.gesture.center, bp.h)
+    console.log("E",ev)
+    console.log("B",bp)
+
+    # console.log("translate3d(#{bp.h.posX}px,#{bp.h.posY}px,0) rotate(#{bp.h.rotation}deg) ")
     $("#bigPhone").animate({
       translate3d: "#{bp.h.posX}px,#{bp.h.posY}px,0",
       rotate: "#{bp.h.rotation}deg"
       },10,'linear'
     )
+    console.log(bp)
 )

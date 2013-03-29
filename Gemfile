@@ -1,6 +1,5 @@
 source "https://rubygems.org"
 gem 'haml'
-gem 'coffee-filter'
 gem 'middleman'
 gem 'sass'
 gem 'compass'
