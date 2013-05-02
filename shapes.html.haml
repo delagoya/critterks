@@ -8,13 +8,13 @@
     / #bigKs.ks
     #smallSkins
       %img(id='tinyIphone' src="images/iphone4-sm.png" )
-      != File.read('static/images/smallSkins.svg')  
+      != File.read('static/images/smallSkins.svg')
     / #bigSkin
     #rotateTest
       %img(id='bigPhone' src="images/iphone4-med.png" )
-      #rotateMessage Nothing yet.
+      %img(id='bigPhone2' src="images/iphone4-med.png" )
     %script(type="text/javascript" src="js/zepto.js")
-    %script(type="text/javascript" src="js/hammer-latest.js")
+    %script(type="text/javascript" src="js/hammer.js")
     %script(type="text/javascript" src="js/hammer.fakemultitouch.js")
     %script(type="text/javascript" src="js/hammer.showtouches.js")
     %script(type="text/javascript" src="js/zepto.hammer.js")
@@ -23,4 +23,4 @@
     %script(type="text/javascript" src="js/shapes.js")
     %script(type="text/javascript" src="js/logo.js")
     %script(type="text/javascript" src="js/shape-palette.js")
-
+    

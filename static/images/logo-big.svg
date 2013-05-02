@@ -26,16 +26,16 @@ style="overflow: hidden; position: relative;">
   <circle cx="34" cy="28" r="3"
   fill="#fdfdf9" stroke="none"
   style=""></circle>
-  <text style="text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 45px; line-height: normal; font-family: 'Helvetica Neue'; opacity: 0.5;"
+  <text style="text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 45px; line-height: normal; font-family: 'Helvetica'; opacity: 0.5;"
   x="176" y="29" text-anchor="middle" font="10px &quot;Arial&quot;"
-  stroke="none" fill="#555555" font-family="Helvetica Neue"
+  stroke="none" fill="#555555" font-family="Helvetica"
   font-weight="bold" font-size="45px" opacity="0.5">
     <tspan dy="17">CritterKins</tspan>
   </text>
-  <text style="text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 45px; line-height: normal; font-family: 'Helvetica Neue';"
+  <text style="text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 45px; line-height: normal; font-family: 'Helvetica';"
   x="176" y="28" text-anchor="middle" font="10px &quot;Arial&quot;"
   stroke="none" fill="#fdfdf9"
-  font-family="Helvetica Neue" font-weight="bold" font-size="45px">
+  font-family="Helvetica" font-weight="bold" font-size="45px">
     <tspan dy="17">CritterKins</tspan>
   </text>
 </svg>

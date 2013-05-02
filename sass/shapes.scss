@@ -1,5 +1,8 @@
 @import "compass";
 @import 'bourbon/bourbon';
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic|Lato:700,900);
+
+
 body {
   background-color: #fdfdf9;
 }
@@ -13,7 +16,9 @@ div {
 }
 
 #logo, .ks {
-    background-color: #54b2a2;
+  font-family: 'Helvetica', sans-serif;
+  font: bold;
+  background-color: #54b2a2;
 }
 
 #smallSkins {
@@ -38,12 +43,23 @@ div {
 
 #rotateTest{
   position: relative;
-  width: 300px;
-  height: 200px;
+  width: 600px;
+  height: 400px;
   float: left;
 }
 
 #rotateMessage {
   width: 300px;
-  float: left;  
+  float: left;
+}
+
+#bigPhone {
+  position:absolute;
+  top:3px;
+  left:0;
+}
+#bigPhone2 {
+  position:absolute;
+  top:3px;
+  left:200px;
 }
