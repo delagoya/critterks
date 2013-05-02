@@ -11,7 +11,7 @@ div { margin-top: 10px; border: 1px solid #666666; -webkit-border-radius: 5px; -
 #smallSkins { position: relative; height: 280px; width: 65px; float: left; }
 
 /* line 26, ../../sass/shapes.scss */
-#smallSkinsImg { position: absolute; left: 0px; top: 2px; z-index: 2; }
+#smallSkinsImg { position: absolute; left: 2.5px; top: 2.5px; z-index: 2; }
 
 /* line 32, ../../sass/shapes.scss */
 #tinyIphone { position: absolute; top: 0px; z-index: 1; }

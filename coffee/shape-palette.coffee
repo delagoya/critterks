@@ -4,7 +4,6 @@
 # bs = paper.bigSkinPath().attr({fill: colors.green, stroke: 'none'})
 # small Skins
 # paper = Raphael("smallSkins",64,275)
-# paper.image("images/iphone4-sm.png",0,0,64,33)
 # verticalSpacer = 35
 # verticalOffset = 0
 # skinColors = [
@@ -52,47 +51,47 @@ bp = Hammer($("#bigPhone")[0], {
 # Use the shift key to add in multi-touch and show them
 if(!Hammer.HAS_TOUCHEVENTS && !Hammer.HAS_POINTEREVENTS) 
   Hammer.plugins.fakeMultitouch()
-  # Hammer.plugins.showTouches()
+  Hammer.plugins.showTouches()
 bp.h = {
   x: 0
   y: 0
   dx: 0
   dy: 0
-  posX: 0
-  posY: 0
-  last_touchX: 0 
-  last_touchY: 0 
   rotation: 0 
-  last_rotation: 0
+  lr: 0
 }
+getRotationValue = (ev) -> 
+  if ev.gesture.srcEvent.type == 'mousemove' &&  ev.gesture.srcEvent.offsetX >= (ev.srcElement.width / 2)
+    # return  (ev.gesture.rotation)
+    return  (0 - ev.gesture.rotation)
+  else
+    return ev.gesture.rotation
+
+
 bp.on(
   "touch drag transform release", 
   (ev) ->
+    # console.log(ev)
     switch ev.type
       when "touch"
         $("#bigPhone").css("border", "3px dashed #458")
         bp.h.x = ev.gesture.center.pageX
         bp.h.y = ev.gesture.center.pageY
-        bp.h.last_touchX = bp.h.x
-        bp.h.last_touchY = bp.h.y
-        bp.h.last_rotation = bp.h.rotation
+        bp.h.lr = bp.h.rotation
       when "drag"
+        bp.h.dx += ev.gesture.center.pageX - bp.h.x
+        bp.h.dy += ev.gesture.center.pageY - bp.h.y
         bp.h.x = ev.gesture.center.pageX
         bp.h.y = ev.gesture.center.pageY
-        bp.h.dx = bp.h.x - bp.h.last_touchX
-        bp.h.dy = bp.h.y - bp.h.last_touchY
-        bp.h.posX += bp.h.dx
-        bp.h.posY += bp.h.dy
-        bp.h.last_touchX = bp.h.x
-        bp.h.last_touchY = bp.h.y
       when "transform"
-        bp.h.rotation = bp.h.last_rotation + ev.gesture.rotation
+        bp.h.rotation = bp.h.lr + getRotationValue(ev)
       when "release" 
         $("#bigPhone").css("border", "none")
-    console.log(ev.gesture.center, bp.h)
-    console.log("translate3d(#{bp.h.posX}px,#{bp.h.posY}px,0) rotate(#{bp.h.rotation}deg) ")
+        ev.gesture
+    # console.log(ev.gesture.center, bp.h)
+    # console.log("translate3d(#{bp.h.posX}px,#{bp.h.posY}px,0) rotate(#{bp.h.rotation}deg) ")
     $("#bigPhone").animate({
-      translate3d: "#{bp.h.posX}px,#{bp.h.posY}px,0",
+      translate3d: "#{bp.h.dx}px,#{bp.h.dy}px,0",
       rotate: "#{bp.h.rotation}deg"
       },10,'linear'
     )
