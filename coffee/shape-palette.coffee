@@ -1,9 +1,4 @@
 # Use the shift key to add in multi-touch and show them
-shapeRegistry = {}
-
-if(!Hammer.HAS_TOUCHEVENTS && !Hammer.HAS_POINTEREVENTS)
-  Hammer.plugins.fakeMultitouch()
-  Hammer.plugins.showTouches()
 
 ## logo
 # #bigSkin
@@ -34,6 +29,15 @@ if(!Hammer.HAS_TOUCHEVENTS && !Hammer.HAS_POINTEREVENTS)
 #   ss.node.setAttribute("index", x)
 #   ss.node.setAttribute("topPosition", "#{verticalSpacer * x + verticalOffset}")
 #   ss.node.setAttribute("id", "smallSkin#{x}")
+# $('#bigPhone').on(
+#   'gesturechange touchstart mousedown',
+#   (e) ->
+#     if (e.type == 'gesturechange')
+#       $('#rotateMessage').text("#{e.type} : #{e.rotation} : #{this}")
+#       $(this.id).animate({rotate: e.rotation }, 200, 'linear')
+#   )
+
+# CSS transform to move the color chooser
 $('#smallSkinsImg path').on(
   'click tap',
   (e) ->
@@ -42,23 +46,20 @@ $('#smallSkinsImg path').on(
       200, 'ease-in-out'
     )
   )
-# $('#bigPhone').on(
-#   'gesturechange touchstart mousedown',
-#   (e) ->
-#     if (e.type == 'gesturechange')
-#       $('#rotateMessage').text("#{e.type} : #{e.rotation} : #{this}")
-#       $(this.id).animate({rotate: e.rotation }, 200, 'linear')
-#   )
+
+shapeRegistry = {}
+# Use the shift key to add in multi-touch and show them
+if(!Hammer.HAS_TOUCHEVENTS && !Hammer.HAS_POINTEREVENTS) 
+  Hammer.plugins.fakeMultitouch()
+  Hammer.plugins.showTouches()
+
 bp = Hammer($("#bigPhone")[0], {
   scale: false, 
   transform_always_block: true,
   drag_block_horizontal: true, 
   drag_block_vertical: true
 })
-# Use the shift key to add in multi-touch and show them
-if(!Hammer.HAS_TOUCHEVENTS && !Hammer.HAS_POINTEREVENTS) 
-  Hammer.plugins.fakeMultitouch()
-  Hammer.plugins.showTouches()
+
 bp.h = {
   x: 0
   y: 0
@@ -67,14 +68,13 @@ bp.h = {
   rotation: 0 
   lr: 0
 }
+
 getRotationValue = (ev) -> 
   if ev.gesture.srcEvent.type == 'mousemove' &&  ev.gesture.srcEvent.offsetX >= (ev.srcElement.width / 2)
     # return  (ev.gesture.rotation)
     return  (0 - ev.gesture.rotation)
   else
     return ev.gesture.rotation
-
-
 bp.on(
   "touch drag transform release", 
   (ev) ->

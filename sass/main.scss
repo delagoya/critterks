@@ -1,36 +1,56 @@
 @import "compass";
+@import "bourbon/bourbon";
 @import "susy";
+
 
 $total-columns  : 12;             // a 12-column grid
 $column-width   : 4em;            // each column is 4em wide
 $gutter-width   : 1em;            // 1em gutters between columns
 $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 
+
 body {
   background-image: image-url("swatches/white.jpg");
-  font-family: "Helvetica Neue", Helvetica, serif;
+  font-family: "Helvetica", Helvetica, serif;
   // height to fit iPad? 
 }
-$default-box-shadow-color: #888;
-$default-box-shadow-h-offset: 1px;
-$default-box-shadow-v-offset: 1px;
+$default-box-shadow: 1px 1px 3px #888;
 
 #container{
-  @include box-shadow();
+
+  @include container;
+  box-shadow: $default-box-shadow;
   background-image: image-url("swatches/cream.jpg");
+
+  #header, #footer { 
+    clear: both; 
+    @include span-columns(12,12);
+  }
+  #content {
+    @include span-columns(12,12);
+  }
 }
 
 #header {
-  @include box-shadow();
+  @include span-columns(12,12); 
+  box-shadow:  $default-box-shadow;
   margin-top: 10px;
   margin-bottom: 25px;
   background-image: image-url("swatches/blue.jpg");
   font-size: 18px;
   font-weight: bold;
-  padding-top: 5px;
+  padding-top: 10px;
   padding-bottom: 5px;
   a {
     text-decoration: none;
+  }
+  #logo {
+    @include span-columns(4,12);
+    padding-left: 5px;
+  }
+  #kickstarter {
+    @include span-columns(4 omega,12);
+
   }
 }
 
@@ -39,45 +59,27 @@ $default-box-shadow-v-offset: 1px;
   // margin-top: 20px;
   // margin-bottom: 0;
   background-image: image-url("swatches/blue.jpg");
-  @include box-shadow();
+  box-shadow:  $default-box-shadow;
+
   text-align: center;
   font-weight: normal;
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 10px;
   margin-bottom: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   color: #fdfdf9;
 }
 
-// #sharelinks {
-//   img {
-//     margin: 5px;
-//     height: 50px;
-//     @include box-shadow();
-//   }
-// }
-
 #graphic, #info {
-  padding: 3px;  
+  @include span-columns(8,12);
+  // padding: 13px;  
   height: 440px;
-  background: #899d4e;
+  background: #e9aeb1;
 }
 
-#skin {
-  // background-image: image-url("iphone4.png");
-  background-repeat: no-repeat;
-  height: 640px;
-  // border: 1px dashed #777;
+#info { 
+  @include span-columns(4 omega, 12);
+  background: #b0bf5d;
 }
 
-#content {
-  // border: 1px dashed #777;  
-}
-
-#rightPanel {
-  height: 640px;
-  @include box-shadow();
-  // background-image: image-url("swatches/yellow.jpg");
-  // border: 1px dashed #777;
-}
