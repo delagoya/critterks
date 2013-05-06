@@ -75,11 +75,9 @@ $default-box-shadow: 1px 1px 3px #888;
   @include span-columns(8,12);
   // padding: 13px;  
   height: 440px;
-  background: #e9aeb1;
 }
 
 #info { 
   @include span-columns(4 omega, 12);
-  background: #b0bf5d;
 }
 

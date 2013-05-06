@@ -23,7 +23,7 @@ body { background-image: url('../images/swatches/white.jpg?1359254727'); font-fa
 #footer { background-image: url('../images/swatches/blue.jpg?1358614968'); box-shadow: 1px 1px 3px #888888; text-align: center; font-weight: normal; font-size: 12px; margin-top: 10px; margin-bottom: 10px; padding-top: 7px; padding-bottom: 7px; color: #fdfdf9; }
 
 /* line 74, ../../sass/main.scss */
-#graphic, #info { width: 66.10169%; float: left; margin-right: 1.69492%; display: inline; height: 440px; background: #e9aeb1; }
+#graphic, #info { width: 66.10169%; float: left; margin-right: 1.69492%; display: inline; height: 440px; }
 
-/* line 81, ../../sass/main.scss */
-#info { width: 32.20339%; float: right; margin-right: 0; *margin-left: -1em; display: inline; background: #b0bf5d; }
+/* line 80, ../../sass/main.scss */
+#info { width: 32.20339%; float: right; margin-right: 0; *margin-left: -1em; display: inline; }
