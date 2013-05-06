@@ -1,12 +1,12 @@
 fs = {
-  'font-family': "Helvetica Neue",
+  'font-family': "Helvetica",
   'font-weight': "bold",
   'font-size': 18,
   fill: "#555",
   stroke: 'none',
   opacity: 0.5}
 fw = {
-  'font-family': "Helvetica Neue",
+  'font-family': "Helvetica",
   'font-weight': "bold",
   'font-size': 18,
   fill: "url(images/swatches/white.jpg)",

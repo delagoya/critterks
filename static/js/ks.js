@@ -2,7 +2,7 @@
 var fs, fw, paper;
 
 fs = {
-  'font-family': "Helvetica Neue",
+  'font-family': "Helvetica",
   'font-weight': "bold",
   'font-size': 18,
   fill: "#555",
@@ -11,7 +11,7 @@ fs = {
 };
 
 fw = {
-  'font-family': "Helvetica Neue",
+  'font-family': "Helvetica",
   'font-weight': "bold",
   'font-size': 18,
   fill: "url(images/swatches/white.jpg)",
