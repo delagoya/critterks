@@ -58,6 +58,7 @@ t2.glow(shapeShadow)
 t3 = paper.pointyTooth(430,240).attr(whiteFill)
 t3.glow(shapeShadow)
 
+# DIV info
 paper = Raphael("info",400,400)
 
 fontShadowProps = {

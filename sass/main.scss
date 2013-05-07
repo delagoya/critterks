@@ -1,6 +1,7 @@
 @import "compass";
 @import "bourbon/bourbon";
 @import "susy";
+@import "sassy-buttons";
 
 
 $total-columns  : 12;             // a 12-column grid
@@ -8,11 +9,11 @@ $column-width   : 4em;            // each column is 4em wide
 $gutter-width   : 1em;            // 1em gutters between columns
 $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 
-
+$sb-base-color: #e59843;
 body {
   background-image: image-url("swatches/white.jpg");
   font-family: "Helvetica", Helvetica, serif;
-  // height to fit iPad? 
+  // height to fit iPad?
 }
 $default-box-shadow: 1px 1px 3px #888;
 
@@ -22,8 +23,8 @@ $default-box-shadow: 1px 1px 3px #888;
   box-shadow: $default-box-shadow;
   background-image: image-url("swatches/cream.jpg");
 
-  #header, #footer { 
-    clear: both; 
+  #header, #footer {
+    clear: both;
     @include span-columns(12,12);
   }
   #content {
@@ -32,7 +33,7 @@ $default-box-shadow: 1px 1px 3px #888;
 }
 
 #header {
-  @include span-columns(12,12); 
+  @include span-columns(12,12);
   box-shadow:  $default-box-shadow;
   margin-top: 10px;
   margin-bottom: 25px;
@@ -73,11 +74,14 @@ $default-box-shadow: 1px 1px 3px #888;
 
 #graphic, #info {
   @include span-columns(8,12);
-  // padding-top: 10px;  
+  // padding-top: 10px;
   height: 440px;
 }
 
-#info { 
+#info {
   @include span-columns(4 omega, 12);
 }
 
+button {
+  @include sassy-button("simple", 10px, 19px, #4ba3cc)
+}
