@@ -10,6 +10,7 @@ $gutter-width   : 1em;            // 1em gutters between columns
 $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 
 $sb-base-color: #e59843;
+
 body {
   background-image: image-url("swatches/white.jpg");
   font-family: "Helvetica", Helvetica, serif;
@@ -83,5 +84,7 @@ $default-box-shadow: 1px 1px 3px #888;
 }
 
 button {
-  @include sassy-button("simple", 10px, 19px, #4ba3cc)
+  background-color: #4ba3cc;
+  text-align: center;
+  @include sassy-button("simple", 10px, 24px, #e59843);
 }
