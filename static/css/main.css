@@ -1,9 +1,9 @@
 /* line 12, ../../sass/main.scss */
-body { background-image: url('../images/swatches/white.jpg?1359254727'); font-family: "Helvetica", Helvetica, serif; }
+body { background-image: url('../images/swatches/white.jpg?1361563393'); font-family: "Helvetica", Helvetica, serif; }
 
 /* line 19, ../../sass/main.scss */
-#container { *zoom: 1; max-width: 59em; _width: 59em; padding-left: 1em; padding-right: 1em; margin-left: auto; margin-right: auto; box-shadow: 1px 1px 3px #888888; background-image: url('../images/swatches/cream.jpg?1358614968'); }
-/* line 38, ../../../../.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#container { *zoom: 1; max-width: 59em; _width: 59em; padding-left: 1em; padding-right: 1em; margin-left: auto; margin-right: auto; box-shadow: 1px 1px 3px #888888; background-image: url('../images/swatches/cream.jpg?1361563393'); }
+/* line 38, ../../../../.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 #container:after { content: ""; display: table; clear: both; }
 /* line 25, ../../sass/main.scss */
 #container #header, #container #footer { clear: both; width: 100%; float: left; margin-right: 1.69492%; display: inline; }
@@ -11,7 +11,7 @@ body { background-image: url('../images/swatches/white.jpg?1359254727'); font-fa
 #container #content { width: 100%; float: left; margin-right: 1.69492%; display: inline; }
 
 /* line 34, ../../sass/main.scss */
-#header { width: 100%; float: left; margin-right: 1.69492%; display: inline; box-shadow: 1px 1px 3px #888888; margin-top: 10px; margin-bottom: 25px; background-image: url('../images/swatches/blue.jpg?1358614968'); font-size: 18px; font-weight: bold; padding-top: 10px; padding-bottom: 5px; }
+#header { width: 100%; float: left; margin-right: 1.69492%; display: inline; box-shadow: 1px 1px 3px #888888; margin-top: 10px; margin-bottom: 25px; background-image: url('../images/swatches/blue.jpg?1361563393'); font-size: 18px; font-weight: bold; padding-top: 10px; padding-bottom: 5px; }
 /* line 44, ../../sass/main.scss */
 #header a { text-decoration: none; }
 /* line 47, ../../sass/main.scss */
@@ -20,7 +20,7 @@ body { background-image: url('../images/swatches/white.jpg?1359254727'); font-fa
 #header #kickstarter { width: 32.20339%; float: right; margin-right: 0; *margin-left: -1em; display: inline; }
 
 /* line 57, ../../sass/main.scss */
-#footer { background-image: url('../images/swatches/blue.jpg?1358614968'); box-shadow: 1px 1px 3px #888888; text-align: center; font-weight: normal; font-size: 12px; margin-top: 10px; margin-bottom: 10px; padding-top: 7px; padding-bottom: 7px; color: #fdfdf9; }
+#footer { background-image: url('../images/swatches/blue.jpg?1361563393'); box-shadow: 1px 1px 3px #888888; text-align: center; font-weight: normal; font-size: 12px; margin-top: 10px; margin-bottom: 10px; padding-top: 7px; padding-bottom: 7px; color: #fdfdf9; }
 
 /* line 74, ../../sass/main.scss */
 #graphic, #info { width: 66.10169%; float: left; margin-right: 1.69492%; display: inline; height: 440px; }

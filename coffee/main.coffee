@@ -18,7 +18,7 @@ for x in [0..4]
   console.log(skinColors[x])
   bigSkin = paper.bigSkinPath().attr({
     fill: skinColors[x][1],
-    stroke: "none", 
+    stroke: "none",
     opacity: 0})
   bigSkin.node.setAttribute('id',"bigSkin#{x}")
   bigSkin.transform("t14,10")
@@ -26,18 +26,38 @@ for x in [0..4]
     bigSkin.attr({opacity: 1})
   bigSkins[x] = bigSkin
 
-# left eye
+# eyes
 leftEye = paper.circle(220,140,60).attr(whiteFill)
 leftEye.shadow = leftEye.glow(shapeShadow)
 rightEye = paper.circle(420,140,60).attr(whiteFill)
 rightEye.shadow = rightEye.glow(shapeShadow)
-
 leftPupilRed = paper.circle(200,160,10).attr(redFill)
 leftPupilRed.shadow = leftPupilRed.glow(shapeShadow)
 rightPupilRed = paper.circle(440,160,10).attr(redFill)
 rightPupilRed.shadow = rightPupilRed.glow(shapeShadow)
 
-# leftPupilRed.drag(moveMove,moveStart,moveEnd)
+# mouth
+redFill =  {
+  fill: colors.red,
+  stroke: "none",
+  'stroke-width': 0
+}
+mouth = paper.rect(160,224,325,15,8).attr(redFill)
+mouth.glow(shapeShadow)
+# teeth
+whiteFill =  {
+  fill: colors.white,
+  stroke: "none",
+  'stroke-width': 0,
+  opacity: 1
+}
+t1 = paper.pointyTooth(210,240).attr(whiteFill)
+t1.glow(shapeShadow)
+t2 = paper.pointyTooth(320,240).attr(whiteFill)
+t2.glow(shapeShadow)
+t3 = paper.pointyTooth(430,240).attr(whiteFill)
+t3.glow(shapeShadow)
+
 paper = Raphael("info",400,400)
 
 fontShadowProps = {
@@ -77,7 +97,7 @@ paper.text(44,50, "You complete me.")
   .attr(fontProps).attr({'font-size': 24})
 
 # more info
-paper.text(40,300,"Create your own Critters\nwith multi-colored\npaper skins\nand self-adhesive\ndetails.")
+paper.text(35,300,"Create your own Critters\nwith multi-colored\npaper skins\nand self-adhesive\ndetails.")
   .attr(fontProps)
   .attr("font-size": 24)
 # title = paper.text(10,50,"iPhone characters\nthat you design.")
