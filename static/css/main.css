@@ -53,7 +53,7 @@ button::-moz-focus-inner { padding: 0 !important; margin: -1px !important; }
 .blurb, .note { position: relative; padding: 15px; margin: 1em 0 3em; border: 2px solid #f0c02b; border-radius: 15px; background: #f9e77a; margin-left: 30px; }
 
 /* line 110, ../../sass/main.scss */
-.note { background: #b1cdc5; border-color: #54b2a2; }
+.note { background: #fdfdf9; border-color: #f0c02b; }
 
 /* line 114, ../../sass/main.scss */
 .blurb:before { content: ""; position: absolute; border-style: solid; /* reduce the damage in FF3.0 */ display: block; width: 0; top: 10px; /* controls vertical position */ bottom: auto; left: -30px; /* value = - border-left-width - border-right-width */ border-width: 15px 30px 15px 0; border-color: transparent #f0c02b; }
