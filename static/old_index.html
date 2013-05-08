@@ -2,13 +2,16 @@
 <html>
   <head>
     <!-- CSS Style sheets -->
-    <link href='css/main.css' rel='stylesheet' type='text/css'>
+    <link href='css/960_12_col.css' rel='stylesheet' type='text/css'>
+    <link href='css/text.css' rel='stylesheet' type='text/css'>
+    <link href='css/reset.css' rel='stylesheet' type='text/css'>
+    <link href='css/app.css' rel='stylesheet' type='text/css'>
     <!-- Javascript includes -->
   </head>
   <body>
-    <div id='container'>
-      <div id='header'>
-        <div id='logo'>
+    <div class='container_12' id='container'>
+      <div class='grid_12' id='header'>
+        <div class='grid_8' id='logo'>
           <a alt='CritterKins logo' href='http://critterkins.com'>
             <svg height="60" version="1.1" width="300"
             xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +56,7 @@
             </svg>
           </a>
         </div>
-        <div id='kickstarter'>
+        <div class='grid_3' id='kickstarter'>
           <a alt='Find out more at our Kickstarter Project site' href='http://www.kickstarter.com/projects/crittercase/1771170582?token=f181f8c4' style='text-decoration: none'>
             <svg height="60" version="1.1" width="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; ">
               <text style="text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 18px; line-height: normal; font-family: 'Helvetica Neue'; opacity: 0.5; " x="69" y="10" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#555555" font-family="Helvetica Neue" font-weight="bold" font-size="18px" opacity="0.5" transform="matrix(1,0,0,1,0,1)"><tspan dy="7">find out more @</tspan></text><text style="text-anchor: middle; font-style: normal; font-variant: normal; font-weight: bold; font-size: 18px; line-height: normal; font-family: 'Helvetica Neue'; " x="69" y="10" text-anchor="middle" font="10px &quot;Arial&quot;" stroke="none" fill="#fdfdf9" font-family="Helvetica Neue" font-weight="bold" font-size="18px"><tspan dy="7">find out more @</tspan></text><rect x="105" y="23" width="180" height="30" r="5" rx="5" ry="5" fill="#555555" stroke="none" style="font-family: 'Helvetica Neue'; font-weight: bold; font-size: 18px; opacity: 0.5; " font-family="Helvetica Neue" font-weight="bold" font-size="18px" opacity="0.5" transform="matrix(1,0,0,1,0,1)"></rect><rect x="105" y="23" width="180" height="30" r="5" rx="5" ry="5" fill="#fdfdf9" stroke="none" style="font-family: 'Helvetica Neue'; font-weight: bold; font-size: 18px; " font-family="Helvetica Neue" font-weight="bold" font-size="18px"></rect>
@@ -61,18 +64,17 @@
           </a>
         </div>
       </div>
-      <div id='content'>
-        <div id='graphic'>
-          <center>
-            <a href='lab.html'>
-              <button>Try out our Virtual CritterLab!</button>
-            </a>
-          </center>
-        </div>
-        <div id='info'></div>
+      <div class='grid_12' id='content'>
+        <div class='grid_8 alpha' id='skin'></div>
+        <div class='grid_4 omega' id='info'></div>
       </div>
-      <div id='footer'>
+      <div class='grid_12' id='footer'>
         <div class='center'>&copy; Copyright 2013,  Turaro, LLC, and CritterKins. All Rights Reserved.</div>
+      </div>
+      <div class='grid_12 alpha omega' id='testForm'>
+        <form action='/' id='frmCritter' name='frmCritter'>
+          <input name='skinColor' type='hidden' value='0'>
+        </form>
       </div>
     </div>
     <script type='text/javascript'>
@@ -83,7 +85,7 @@
     <script src='js/raphael.js' type='text/javascript'></script>
     <script src='js/colors.js' type='text/javascript'></script>
     <script src='js/shapes.js' type='text/javascript'></script>
-    <script src='js/main.js' type='text/javascript'></script>
+    <script src='js/skin.js' type='text/javascript'></script>
     <!-- this is the end -->
   </body>
 </html>
