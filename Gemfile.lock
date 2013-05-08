@@ -13,6 +13,9 @@ GEM
     haml (4.0.2)
       tilt
     sass (3.2.8)
+    sassy-buttons (0.1.4)
+      compass (>= 0.12.2)
+      sass (>= 3.2.0)
     susy (1.0.8)
       compass (>= 0.12.2)
       sass (>= 3.2.0)
@@ -27,5 +30,6 @@ DEPENDENCIES
   compass
   haml
   sass
+  sassy-buttons
   susy
   watchr
