@@ -72,14 +72,18 @@ $default-box-shadow: 1px 1px 3px #888;
   color: #fdfdf9;
 }
 
-#graphic, #info {
+#graphic {
   @include span-columns(8,12);
-  // padding-top: 10px;
-  height: 440px;
 }
 
 #info {
   @include span-columns(4 omega, 12);
+  .text {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 24px;
+  }
 }
 
 button {

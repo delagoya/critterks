@@ -1,4 +1,4 @@
-paper = Raphael("graphic",620,318)
+paper = Raphael("graphic",620,330)
 
 iphone = paper.image("images/iphone4.png",0,0,620,318)
 
@@ -59,7 +59,7 @@ t3 = paper.pointyTooth(430,240).attr(whiteFill)
 t3.glow(shapeShadow)
 
 # DIV info
-paper = Raphael("info",400,400)
+paper = Raphael("info",400,100)
 
 fontShadowProps = {
   'text-anchor': 'start',
@@ -97,11 +97,3 @@ paper.text(45,51, "You complete me.")
 paper.text(44,50, "You complete me.")
   .attr(fontProps).attr({'font-size': 24})
 
-# more info
-paper.text(35,300,"Create your own Critters\nwith multi-colored\npaper skins\nand self-adhesive\ndetails.")
-  .attr(fontProps)
-  .attr("font-size": 24)
-# title = paper.text(10,50,"iPhone characters\nthat you design.")
-#   .attr(fontShadowProps).attr('font-size': 24).transform("r5")
-# title = paper.text(10,50,"iPhone characters\nthat you design.")
-#   .attr(fontProps).attr('font-size': 24).transform("r5")
