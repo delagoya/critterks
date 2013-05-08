@@ -26,11 +26,11 @@ body { background-image: url('../images/swatches/white.jpg?1359254727'); font-fa
 #graphic { width: 66.10169%; float: left; margin-right: 1.69492%; display: inline; }
 
 /* line 79, ../../sass/main.scss */
-#info { width: 32.20339%; float: right; margin-right: 0; *margin-left: -1em; display: inline; }
-/* line 81, ../../sass/main.scss */
+#info { width: 32.20339%; float: right; margin-right: 0; *margin-left: -1em; display: inline; vertical-align: top; }
+/* line 82, ../../sass/main.scss */
 #info .text { padding-top: 30px; padding-left: 30px; padding-right: 30px; font-size: 24px; }
 
-/* line 89, ../../sass/main.scss */
+/* line 90, ../../sass/main.scss */
 button { background-color: #e59843; text-align: center; font-size: 24px; padding: 0.5em 1.5em; display: inline-block; cursor: pointer; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; *zoom: 1; filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE59843', endColorstr='#FFAA6518'); background: linear, #e59843, #d77f1e; -webkit-box-shadow: #eebd86 0 1px 0 inset; -moz-box-shadow: #eebd86 0 1px 0 inset; box-shadow: #eebd86 0 1px 0 inset; border: 1px solid #c1721b; color: white; text-shadow: #905514 0 -1px 0; }
 /* line 15, ../../../../.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 button:hover { text-decoration: none; }

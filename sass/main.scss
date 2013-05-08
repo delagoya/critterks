@@ -78,6 +78,7 @@ $default-box-shadow: 1px 1px 3px #888;
 
 #info {
   @include span-columns(4 omega, 12);
+  vertical-align: top;
   .text {
     padding-top: 30px;
     padding-left: 30px;

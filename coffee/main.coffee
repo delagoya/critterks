@@ -59,7 +59,6 @@ t3 = paper.pointyTooth(430,240).attr(whiteFill)
 t3.glow(shapeShadow)
 
 # DIV info
-paper = Raphael("info",400,100)
 
 fontShadowProps = {
   'text-anchor': 'start',
@@ -87,13 +86,14 @@ shapeShadow = {
 }
 
 # talk bubble
-talkBubble = paper.path("M250,70c0,5.523-4.125,10-9.213,10H28.888c-5.088,0-9.213-4.477-9.213-10V51.92L0,38.293l19.675-13.541V10
-  c0-5.523,4.125-10,9.213-10h211.899C245.875,0,250,4.477,250,10V70z")
-  .attr({fill: colors.liteYellow, stroke: 'none'})
-  .transform('t9,10')
-  .glow(shapeShadow)
-paper.text(45,51, "You complete me.")
-  .attr(fontShadowProps).attr({'font-size': 24})
-paper.text(44,50, "You complete me.")
-  .attr(fontProps).attr({'font-size': 24})
+# paper = Raphael("info",400,100)
+# talkBubble = paper.path("M250,70c0,5.523-4.125,10-9.213,10H28.888c-5.088,0-9.213-4.477-9.213-10V51.92L0,38.293l19.675-13.541V10
+#   c0-5.523,4.125-10,9.213-10h211.899C245.875,0,250,4.477,250,10V70z")
+#   .attr({fill: colors.liteYellow, stroke: 'none'})
+#   .transform('t9,10')
+#   .glow(shapeShadow)
+# paper.text(45,51, "You complete me.")
+#   .attr(fontShadowProps).attr({'font-size': 24})
+# paper.text(44,50, "You complete me.")
+#   .attr(fontProps).attr({'font-size': 24})
 
