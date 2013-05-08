@@ -23,14 +23,14 @@ body { background-image: url('../images/swatches/white.jpg?1359254727'); font-fa
 #footer { background-image: url('../images/swatches/blue.jpg?1358614968'); box-shadow: 1px 1px 3px #888888; text-align: center; font-weight: normal; font-size: 12px; margin-top: 10px; margin-bottom: 10px; padding-top: 7px; padding-bottom: 7px; color: #fdfdf9; }
 
 /* line 75, ../../sass/main.scss */
-#graphic { width: 66.10169%; float: left; margin-right: 1.69492%; display: inline; }
+#graphic { width: 66.10169%; float: left; margin-right: 1.69492%; display: inline; vertical-align: top; text-align: top; }
 
-/* line 79, ../../sass/main.scss */
+/* line 81, ../../sass/main.scss */
 #info { width: 32.20339%; float: right; margin-right: 0; *margin-left: -1em; display: inline; vertical-align: top; }
-/* line 82, ../../sass/main.scss */
+/* line 84, ../../sass/main.scss */
 #info .text { padding-top: 30px; padding-left: 30px; padding-right: 30px; font-size: 24px; }
 
-/* line 90, ../../sass/main.scss */
+/* line 92, ../../sass/main.scss */
 button { background-color: #e59843; text-align: center; font-size: 24px; padding: 0.5em 1.5em; display: inline-block; cursor: pointer; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; *zoom: 1; filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFE59843', endColorstr='#FFAA6518'); background: linear, #e59843, #d77f1e; -webkit-box-shadow: #eebd86 0 1px 0 inset; -moz-box-shadow: #eebd86 0 1px 0 inset; box-shadow: #eebd86 0 1px 0 inset; border: 1px solid #c1721b; color: white; text-shadow: #905514 0 -1px 0; }
 /* line 15, ../../../../.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 button:hover { text-decoration: none; }
@@ -42,3 +42,21 @@ button:active { -webkit-box-shadow: #b36a19 0 1px 2px inset; -moz-box-shadow: #b
 button.disabled, button[disabled] { opacity: 0.6; background: #d77f1e; cursor: default; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
 /* line 73, ../../../../.rbenv/versions/1.9.3-p327/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.4/stylesheets/_sassy-buttons.sass */
 button::-moz-focus-inner { padding: 0 !important; margin: -1px !important; }
+
+/* line 97, ../../sass/main.scss */
+.medText { font-size: 18px; }
+
+/* line 100, ../../sass/main.scss */
+.bigText { font-size: 22px; }
+
+/* line 104, ../../sass/main.scss */
+.blurb, .note { position: relative; padding: 15px; margin: 1em 0 3em; border: 2px solid #f0c02b; border-radius: 15px; background: #f9e77a; margin-left: 30px; }
+
+/* line 113, ../../sass/main.scss */
+.note { background: #b1cdc5; border-color: #54b2a2; }
+
+/* line 117, ../../sass/main.scss */
+.blurb:before { content: ""; position: absolute; border-style: solid; /* reduce the damage in FF3.0 */ display: block; width: 0; top: 10px; /* controls vertical position */ bottom: auto; left: -30px; /* value = - border-left-width - border-right-width */ border-width: 15px 30px 15px 0; border-color: transparent #f0c02b; }
+
+/* line 131, ../../sass/main.scss */
+.blurb:after { content: ""; position: absolute; top: 16px; /* value = (:before top) + (:before border-top) - (:after border-top) */ bottom: auto; left: -21px; /* value = - border-left-width - border-right-width */ border-width: 9px 21px 9px 0; border-color: transparent #f9e77a; border-style: solid; display: block; width: 0; }

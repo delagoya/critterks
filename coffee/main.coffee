@@ -1,4 +1,12 @@
-paper = Raphael("graphic",620,330)
+paper = Raphael("graphic")
+paper.setViewBox(0,0,620,330,true)
+paper.setSize('100%', '60%')
+paper.canvas.setAttribute("id",'bigCritterMain')
+paper.canvas.setAttribute("id",'bigCritterMain')
+paper.canvas.setAttribute('preserveAspectRatio', 'xMidYMid meet')
+# paper.canvas.removeAttribute("height")
+console.log(paper)
+# paper.canvas.('width');
 
 iphone = paper.image("images/iphone4.png",0,0,620,318)
 
@@ -15,7 +23,6 @@ skinColors = [
 currSkinIndex = 1
 
 for x in [0..4]
-  console.log(skinColors[x])
   bigSkin = paper.bigSkinPath().attr({
     fill: skinColors[x][1],
     stroke: "none",

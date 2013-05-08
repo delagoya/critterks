@@ -15,12 +15,13 @@
             != File.read('static/images/findoutmore-ks.svg')
       #content
         #graphic
+          / != File.read('static/images/bigCritterMain.svg')
           %center
             %a(href="lab.html")
               %button Try out our Virtual CritterLab!
         #info
-          != File.read('static/images/text_bubble.svg')
-          .text
+          .blurb.medText You complete me.
+          .note.bigText
             Create your own CritterKin iPhone skin characters with multicolor
             paper skins and self-adhesive details.
       #footer
