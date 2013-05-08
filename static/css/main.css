@@ -17,7 +17,7 @@ body { background-image: url('../images/swatches/white.jpg?1359254727'); font-fa
 /* line 48, ../../sass/main.scss */
 #header #logo { width: 32.20339%; float: left; margin-right: 1.69492%; display: inline; padding-left: 5px; }
 /* line 52, ../../sass/main.scss */
-#header #kickstarter { width: 32.20339%; float: right; margin-right: 0; *margin-left: -1em; display: inline; }
+#header #kickstarter { width: 49.15254%; float: right; margin-right: 0; *margin-left: -1em; display: inline; text-align: right; }
 
 /* line 58, ../../sass/main.scss */
 #footer { background-image: url('../images/swatches/blue.jpg?1358614968'); box-shadow: 1px 1px 3px #888888; text-align: center; font-weight: normal; font-size: 12px; margin-top: 10px; margin-bottom: 10px; padding-top: 7px; padding-bottom: 7px; color: #fdfdf9; }
