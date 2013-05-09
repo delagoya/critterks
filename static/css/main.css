@@ -52,11 +52,11 @@ button::-moz-focus-inner { padding: 0 !important; margin: -1px !important; }
 /* line 101, ../../sass/main.scss */
 .blurb, .note { position: relative; padding: 15px; margin: 1em 0 3em; border: 2px solid #f0c02b; border-radius: 15px; background: #f9e77a; margin-left: 30px; }
 
-/* line 110, ../../sass/main.scss */
-.note { background: #fdfdf9; border-color: #f0c02b; }
+/* line 111, ../../sass/main.scss */
+.note { background: #fdfdf9; border-color: #f0c02b; margin: 0; margin-left: 0; }
 
-/* line 114, ../../sass/main.scss */
+/* line 117, ../../sass/main.scss */
 .blurb:before { content: ""; position: absolute; border-style: solid; /* reduce the damage in FF3.0 */ display: block; width: 0; top: 10px; /* controls vertical position */ bottom: auto; left: -30px; /* value = - border-left-width - border-right-width */ border-width: 15px 30px 15px 0; border-color: transparent #f0c02b; }
 
-/* line 128, ../../sass/main.scss */
+/* line 131, ../../sass/main.scss */
 .blurb:after { content: ""; position: absolute; top: 16px; /* value = (:before top) + (:before border-top) - (:after border-top) */ bottom: auto; left: -21px; /* value = - border-left-width - border-right-width */ border-width: 9px 21px 9px 0; border-color: transparent #f9e77a; border-style: solid; display: block; width: 0; }

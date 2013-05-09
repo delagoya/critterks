@@ -4,17 +4,17 @@
 /* line 8, ../../sass/lab.scss */
 #smallSkinsImg { position: absolute; left: 2.5px; top: 2.5px; z-index: 2; }
 
-/* line 14, ../../sass/lab.scss */
+/* line 15, ../../sass/lab.scss */
 #tinyIphone { position: absolute; top: 0px; z-index: 1; }
 
-/* line 21, ../../sass/lab.scss */
+/* line 22, ../../sass/lab.scss */
 #rotateTest { position: relative; width: 600px; height: 400px; float: left; }
 
-/* line 28, ../../sass/lab.scss */
+/* line 29, ../../sass/lab.scss */
 #rotateMessage { width: 300px; float: left; }
 
-/* line 33, ../../sass/lab.scss */
+/* line 34, ../../sass/lab.scss */
 #bigPhone { position: absolute; top: 3px; left: 0; }
 
-/* line 38, ../../sass/lab.scss */
+/* line 39, ../../sass/lab.scss */
 #bigPhone2 { position: absolute; top: 3px; left: 200px; }
