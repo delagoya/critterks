@@ -1,7 +1,4 @@
-paper = Raphael("graphic")
-paper.setViewBox(0,0,620,330,true)
-paper.setSize('100%', '50%')
-paper.canvas.setAttribute("id",'bigCritterMain')
+paper = Raphael("graphic",620,330)
 paper.canvas.setAttribute("id",'bigCritterMain')
 paper.canvas.setAttribute('preserveAspectRatio', 'xMidYMid meet')
 # paper.canvas.removeAttribute("height")

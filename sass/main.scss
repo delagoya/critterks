@@ -72,13 +72,13 @@ $default-box-shadow: 1px 1px 3px #888;
   color: #fdfdf9;
 }
 
-#graphic {
+#graphic, #critter {
   @include span-columns(8,12);
   vertical-align: top;
   text-align: top;
 }
 
-#info {
+#info,#palette {
   @include span-columns(4 omega, 12);
   vertical-align: top;
   .text {
@@ -116,7 +116,7 @@ button {
   position:absolute;
   border-style:solid;
   /* reduce the damage in FF3.0 */
-  display:block; 
+  display:block;
   width:0;
   top:10px; /* controls vertical position */
   bottom:auto;
@@ -134,7 +134,7 @@ button {
   border-width:9px 21px 9px 0;
   border-color:transparent #f9e77a;
   border-style:solid;
-  display:block; 
+  display:block;
   width:0;
 }
 

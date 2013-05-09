@@ -1,0 +1,42 @@
+#smallSkins {
+  position: relative;
+  height: 280px;
+  width: 65px;
+  float: left;
+}
+
+#smallSkinsImg {
+  position: absolute;
+  left: 2.5px;
+  top: 2.5px;
+  z-index: 2;
+}
+#tinyIphone {
+  position: absolute;
+  // left: 10;
+  top: 0px;
+  z-index: 1;
+}
+
+#rotateTest{
+  position: relative;
+  width: 600px;
+  height: 400px;
+  float: left;
+}
+
+#rotateMessage {
+  width: 300px;
+  float: left;
+}
+
+#bigPhone {
+  position:absolute;
+  top:3px;
+  left:0;
+}
+#bigPhone2 {
+  position:absolute;
+  top:3px;
+  left:200px;
+}

@@ -14,14 +14,15 @@
           %a(href="http://www.kickstarter.com/projects/crittercase/1771170582?token=f181f8c4" alt='Find out more at our Kickstarter Project site' style='text-decoration: none')
             != File.read('static/images/findoutmore-ks.svg')
       #content
-        #graphic
-          %center
-            %a(href="lab.html")
-              %button Try out our Virtual CritterLab!
-        #info
-          .text
-            Create your own CritterKin iPhone skin characters with multicolor
-            paper skins and self-adhesive details.
+        #critter
+          #smallSkins
+            %img(id='tinyIphone' src="images/iphone4-sm.png" )
+            / != File.read('static/images/smallSkins.svg')
+          #bigSkin
+        #palette
+          .note
+            Drag and drop shapes below.
+            Use two fingers, or press the "shift" key, to rotate a shape.
       #footer
         .center &copy; Copyright 2013,  Turaro, LLC, and CritterKins. All Rights Reserved.
     %script(type="text/javascript")
@@ -31,5 +32,6 @@
     %script(type="text/javascript" src="js/raphael.js")
     %script(type="text/javascript" src="js/colors.js")
     %script(type="text/javascript" src="js/shapes.js")
-    %script(type="text/javascript" src="js/main.js")
+    %script(type="text/javascript" src="js/lab.js")
     / this is the end
+

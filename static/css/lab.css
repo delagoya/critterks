@@ -1,0 +1,20 @@
+/* line 1, ../../sass/lab.scss */
+#smallSkins { position: relative; height: 280px; width: 65px; float: left; }
+
+/* line 8, ../../sass/lab.scss */
+#smallSkinsImg { position: absolute; left: 2.5px; top: 2.5px; z-index: 2; }
+
+/* line 14, ../../sass/lab.scss */
+#tinyIphone { position: absolute; top: 0px; z-index: 1; }
+
+/* line 21, ../../sass/lab.scss */
+#rotateTest { position: relative; width: 600px; height: 400px; float: left; }
+
+/* line 28, ../../sass/lab.scss */
+#rotateMessage { width: 300px; float: left; }
+
+/* line 33, ../../sass/lab.scss */
+#bigPhone { position: absolute; top: 3px; left: 0; }
+
+/* line 38, ../../sass/lab.scss */
+#bigPhone2 { position: absolute; top: 3px; left: 200px; }
