@@ -9,9 +9,24 @@ $gutter-width   : 1em;            // 1em gutters between columns
 $grid-padding   : $gutter-width;  // grid-padding equal to gutters
 
 $sb-base-color: #e59843;
+$black:        #111111;
+$blue: 	       #54b2a2;
+$cream:        #fff5e1;
+$green:        #899d4e;
+$liteBlue:     #b1cdc5;
+$liteGreen:    #b0bf5d;
+$litePink:     #e9aeb1;
+$liteYellow:   #f9e77a;
+$orange:       #e59843;
+$pink:         #c44f7f;
+$purple: #85719f;
+$red:    #8e2f2d;
+$white:  #fdfdf9;
+$yellow: #f0c02b;
 
 body {
-  background-image: image-url("swatches/white.jpg");
+  background: $cream;
+  // background-image: image-url("swatches/white.jpg");
   font-family: "Helvetica", Helvetica, serif;
   // height to fit iPad?
 }
@@ -21,11 +36,12 @@ $default-box-shadow: 1px 1px 3px #888;
 
   @include container;
   box-shadow: $default-box-shadow;
-  background-image: image-url("swatches/cream.jpg");
+  background: $white;
 
   #header, #footer {
     clear: both;
     @include span-columns(12,12);
+    background: $blue;
   }
   #content {
     @include span-columns(12,12);
@@ -72,15 +88,113 @@ $default-box-shadow: 1px 1px 3px #888;
   color: #fdfdf9;
 }
 
-#graphic, #critter {
-  @include span-columns(8,12);
-  vertical-align: top;
-  text-align: top;
+#slides {
+  @include span-columns(6,12);
+  // prevent slideshow from flashing on load
+  display: none;
+
 }
 
-#info,#palette {
-  @include span-columns(4 omega, 12);
+.slidesjs-pagination .active {
+      color: $red;
+}
+a.slidesjs-next,
+    a.slidesjs-previous,
+    a.slidesjs-play,
+    a.slidesjs-stop {
+      background-image: url(../images/btns-next-prev.png);
+      background-repeat: no-repeat;
+      display:block;
+      width:12px;
+      height:18px;
+      overflow: hidden;
+      text-indent: -9999px;
+      float: left;
+      margin-right:5px;
+      margin-top: 5px;
+    }
+
+    a.slidesjs-next {
+      margin-right:10px;
+      background-position: -12px 0;
+    }
+
+    a:hover.slidesjs-next {
+      background-position: -12px -18px;
+    }
+
+    a.slidesjs-previous {
+      background-position: 0 0;
+    }
+
+    a:hover.slidesjs-previous {
+      background-position: 0 -18px;
+    }
+
+    a.slidesjs-play {
+      width:15px;
+      background-position: -25px 0;
+    }
+
+    a:hover.slidesjs-play {
+      background-position: -25px -18px;
+    }
+
+    a.slidesjs-stop {
+      width:18px;
+      background-position: -41px 0;
+    }
+
+    a:hover.slidesjs-stop {
+      background-position: -41px -18px;
+    }
+
+    .slidesjs-pagination {
+      margin: 7px 0 0;
+      float: right;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+      float: left;
+      margin: 0 1px;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 13px;
+      height: 0;
+      padding-top: 13px;
+      background-image: url(images/pagination.png);
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -13px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -26px
+    }
+
+    #slides a:link,
+    #slides a:visited {
+      color: #333
+    }
+
+    #slides a:hover,
+    #slides a:active {
+      color: #9e2020
+    }
+
+
+#msg {
+  @include span-columns(6 omega, 12);
   vertical-align: top;
+  text-align: center;
   .text {
     font-size: 24px;
   }

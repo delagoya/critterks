@@ -1,9 +1,11 @@
 !!!
 %html
   %head
-    / CSS Style sheets
+    / CSS Style sheets - include for dev
     %link(rel="stylesheet" type="text/css" href="css/main.css")
-    / Javascript includes
+    / Switch to below for prod.
+    / %style(type="text/css")
+    /   != File.read("static/css/main.css")
   %body
     #container
       #header
@@ -14,24 +16,29 @@
           %a(href="http://www.kickstarter.com/projects/crittercase/1771170582?token=f181f8c4" alt='Find out more at our Kickstarter Project site' style='text-decoration: none')
             != File.read('static/images/findoutmore-ks.svg')
       #content
-        #graphic
+        #slides
           / != File.read('static/images/bigCritterMain.svg')
-          %center
-            %a(href="lab.html")
-              %button Try out our Virtual CritterLab!
-        #info
-          .blurb.medText You complete me.
-          .note.bigText
-            Create your own CritterKin iPhone skin characters with multicolor
-            paper skins and self-adhesive details.
+          %img(src='images/slides/3.jpg')
+          %img(src='images/slides/1.jpg')
+          %img(src='images/slides/2.jpg')
+        #msg
+          Create your own CritterKin iPhone skin characters with multicolor
+          paper skins and self-adhesive details.
       #footer
         .center &copy; Copyright 2013,  Turaro, LLC, and CritterKins. All Rights Reserved.
     %script(type="text/javascript")
-      document.write('<script src=js/' +
-      ('__proto__' in {} ? 'zepto' : 'jquery-1.9.0') +
-      '.js><\/script>')
-    %script(type="text/javascript" src="js/raphael.js")
-    %script(type="text/javascript" src="js/colors.js")
-    %script(type="text/javascript" src="js/shapes.js")
-    %script(type="text/javascript" src="js/main.js")
-    / this is the end
+      != File.read("static/js/jquery.min.js")
+      != File.read("static/js/jquery.slides.min.js")
+    :javascript
+      $(function() {
+        $('#slides').slidesjs({
+          width: 940,
+          height: 700,
+          play: {
+            active: true,
+            auto: true,
+            interval: 3000,
+            swap: true
+          }
+        });
+      });
