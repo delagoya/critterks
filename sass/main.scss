@@ -39,45 +39,40 @@ body {
   @include container($total-columns,$break1,$break2);
   box-shadow: $default-box-shadow;
   background: $white;
+  // margin-left: 0 - $grid-padding;
+  padding-left: 0;
+  padding-right: 0;
 }
-
-#header, #footer {
-  margin-left: 0 - $grid-padding;
-  padding-left: $grid-padding;
-  margin-right: 0 - $grid-padding;
-  padding-right: $grid-padding;
-  clear: both;
-  background: $blue;
-  box-shadow:  $default-box-shadow;
-  margin-top: 10px;
-  margin-bottom: 25px;
-  font-size: 18px;
-  font-weight: bold;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  a {
-    text-decoration: none;
+  #header, #footer {
+    margin-bottom: 10px;
+    margin-top: 5px;
+    clear: both;
+    background: $blue;
+    box-shadow:  $default-box-shadow;
+    font-size: 18px;
+    font-weight: bold;
+    a {
+      text-decoration: none;
+    }
+    @include span-columns($total-columns omega,$total-columns);
   }
-  @include span-columns($total-columns,$total-columns);
-}
 
-#footer {
-  box-shadow:  $default-box-shadow;
-  text-align: center;
-  font-weight: normal;
-  font-size: 12px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  color: $white;
-}
+  #footer {
+    margin: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow:  $default-box-shadow;
+    text-align: center;
+    font-weight: normal;
+    font-size: 12px;
+    color: $white;
+  }
+// }
 
 #logo svg, #kickstarter svg {
-  padding-left: 5px;
-  margin-left: 5px;
-  width: 100%;
+  margin: 5px;
 }
+
 #kickstarter {
   text-align: right;
 }
@@ -97,6 +92,10 @@ body {
 
 
 @include at-breakpoint($break1) {
+  #container {
+    padding-left: $grid-padding;
+    padding-right: $grid-padding;
+  }
   $c1: 4;
   $c2: 4;
   #header {
@@ -122,6 +121,10 @@ body {
 @include at-breakpoint($break2) {
   $c1: 6;
   $c2: 6;
+  #container {
+    padding-left: $grid-padding;
+    padding-right: $grid-padding;
+  }
   #header {
     @include span-columns($break2,$break2);
     #logo {

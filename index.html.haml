@@ -1,8 +1,9 @@
 !!!
 %html
-  %head
-    %style(type="text/css")
-      != File.read("static/css/main.css")
+  %head    
+    %link(rel="stylesheet" type="text/css" href="css/main.css")
+    / %style(type="text/css")
+    /   != File.read("static/css/main.css")
     %meta(name="viewport" content="width=device-width")
   %body
     #container
