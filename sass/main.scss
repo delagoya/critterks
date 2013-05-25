@@ -42,6 +42,8 @@ body {
 }
 
 #header, #footer {
+  margin: 0 0 - $grid-padding;
+  padding: 0 $grid-padding;
   clear: both;
   background: $blue;
   box-shadow:  $default-box-shadow;
@@ -72,6 +74,7 @@ body {
 #logo svg, #kickstarter svg {
   padding-left: 5px;
   margin-left: 5px;
+  width: 100%;
 }
 #kickstarter {
   text-align: right;
@@ -80,6 +83,8 @@ body {
 // Layout
 #content {
   @include span-columns($total-columns,$total-columns);
+  margin: 0 0 - $grid-padding;
+  padding: 0 $grid-padding;
   #slides {
     @include span-columns($total-columns, $total-columns);
   }
