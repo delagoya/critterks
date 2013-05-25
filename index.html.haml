@@ -2,10 +2,10 @@
 %html
   %head
     / CSS Style sheets - include for dev
-    %link(rel="stylesheet" type="text/css" href="css/main.css")
+    / %link(rel="stylesheet" type="text/css" href="css/main.css")
     / Switch to below for prod.
-    / %style(type="text/css")
-    /   != File.read("static/css/main.css")
+    %style(type="text/css")
+      != File.read("static/css/main.css")
   %body
     #container
       #header
@@ -37,7 +37,7 @@
           play: {
             active: true,
             auto: true,
-            interval: 3000,
+            interval: 4000,
             swap: true
           }
         });

@@ -3,11 +3,16 @@
 @import "susy";
 @import "sassy-buttons";
 
-$total-columns  : 12;             // a 12-column grid
+$total-columns  : 4;             // a 12-column grid
 $column-width   : 4em;            // each column is 4em wide
 $gutter-width   : 1em;            // 1em gutters between columns
 $grid-padding   : $gutter-width;  // grid-padding equal to gutters
+$break1: 8;
+$break2: 12;
 
+$content-cols: $total-columns;
+
+// Colors
 $sb-base-color: #e59843;
 $black:        #111111;
 $blue: 	       #54b2a2;
@@ -23,37 +28,25 @@ $purple: #85719f;
 $red:    #8e2f2d;
 $white:  #fdfdf9;
 $yellow: #f0c02b;
+$default-box-shadow: 1px 1px 3px #888;
 
 body {
   background: $cream;
-  // background-image: image-url("swatches/white.jpg");
   font-family: "Helvetica", Helvetica, serif;
-  // height to fit iPad?
 }
-$default-box-shadow: 1px 1px 3px #888;
 
 #container{
-
-  @include container;
+  @include container($total-columns,$break1,$break2);
   box-shadow: $default-box-shadow;
   background: $white;
-
-  #header, #footer {
-    clear: both;
-    @include span-columns(12,12);
-    background: $blue;
-  }
-  #content {
-    @include span-columns(12,12);
-  }
 }
 
-#header {
-  @include span-columns(12,12);
+#header, #footer {
+  clear: both;
+  background: $blue;
   box-shadow:  $default-box-shadow;
   margin-top: 10px;
   margin-bottom: 25px;
-  background-image: image-url("swatches/blue.jpg");
   font-size: 18px;
   font-weight: bold;
   padding-top: 10px;
@@ -61,38 +54,91 @@ $default-box-shadow: 1px 1px 3px #888;
   a {
     text-decoration: none;
   }
-  #logo {
-    @include span-columns(4,12);
-    padding-left: 5px;
-  }
-  #kickstarter {
-    @include span-columns(6 omega,12);
-    text-align: right;
-  }
+  @include span-columns($total-columns,$total-columns);
 }
 
 #footer {
-  // @extend #header;
-  // margin-top: 20px;
-  // margin-bottom: 0;
-  background-image: image-url("swatches/blue.jpg");
   box-shadow:  $default-box-shadow;
-
   text-align: center;
   font-weight: normal;
   font-size: 12px;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
   padding-top: 7px;
   padding-bottom: 7px;
-  color: #fdfdf9;
+  color: $white;
+}
+
+#logo svg, #kickstarter svg {
+  padding-left: 5px;
+  margin-left: 5px;
+}
+#kickstarter {
+  text-align: right;
+}
+
+// Layout
+#content {
+  @include span-columns($total-columns,$total-columns);
+  #slides {
+    @include span-columns($total-columns, $total-columns);
+  }
+  #msg {
+   @include span-columns($total-columns omega, $total-columns);
+  }
+}
+
+
+@include at-breakpoint($break1) {
+  $c1: 4;
+  $c2: 4;
+  #header {
+    @include span-columns($break1,$break1);
+    #logo {
+      @include span-columns($c1,$break1);
+    }
+    #kickstarter {
+      @include span-columns($c2 omega,$break1);
+    }
+  }
+  #content {
+    @include span-columns($break1,$break1);
+    #slides {
+      @include span-columns($c1, $break1);
+    }
+    #msg {
+      @include span-columns($c2 omega,$break1);      
+    }
+  }
+}
+
+@include at-breakpoint($break2) {
+  $c1: 6;
+  $c2: 6;
+  #header {
+    @include span-columns($break2,$break2);
+    #logo {
+      @include span-columns($c1 ,$break2);
+    }
+    #kickstarter {
+      @include span-columns($c2 omega ,$break2);
+      text-align: right;
+    }
+  }
+  #content {
+    @include span-columns($break2,$break2);
+    #slides {
+      @include span-columns($c1, $break2);
+    }
+    #msg {
+      @include span-columns($c2 omega,$break2);
+    }
+  }
 }
 
 #slides {
-  @include span-columns(6,12);
-  // prevent slideshow from flashing on load
   display: none;
-
+  padding-bottom: 10px;
 }
 
 .slidesjs-pagination .active {
