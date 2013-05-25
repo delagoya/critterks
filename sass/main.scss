@@ -42,8 +42,10 @@ body {
 }
 
 #header, #footer {
-  margin: 0 0 - $grid-padding;
-  padding: 0 $grid-padding;
+  margin-left: 0 - $grid-padding;
+  padding-left: $grid-padding;
+  margin-right: 0 - $grid-padding;
+  padding-right: $grid-padding;
   clear: both;
   background: $blue;
   box-shadow:  $default-box-shadow;
