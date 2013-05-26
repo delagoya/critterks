@@ -76,6 +76,10 @@ body {
 }
 #msg  {
   text-align: center;
+  height: 75px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 75px;
   span {
     display: inline-block;
     vertical-align: middle;
@@ -118,6 +122,9 @@ body {
       @include span-columns($c1, $break1);
     }
     #msg {
+      $h: 251px;
+      height: $h;
+      line-height: $h;
       @include span-columns($c2 omega,$break1);      
     }
   }
@@ -146,7 +153,9 @@ body {
       @include span-columns($c1, $break2);
     }
     #msg {
-      vertical-align: middle;
+      $h: 371px;
+      height: $h;
+      line-height: $h;
       @include span-columns($c2 omega,$break2);
     }
   }
