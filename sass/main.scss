@@ -76,16 +76,26 @@ body {
 }
 #msg  {
   text-align: center;
-  height: 75px;
   padding-top: 5px;
   padding-bottom: 5px;
-  line-height: 75px;
+  // height: 75px;
+  // line-height: 75px;
   span {
+    font-size: 18px;
     display: inline-block;
     vertical-align: middle;
     line-height: normal;  
+    & a {
+      color: $black;
+      font-weight: bold;
+      text-decoration: underline;
+      &:hover {
+        color: $green;
+      }
+    }
   }
 }
+
 // Layout
 #content {
   @include span-columns($total-columns,$total-columns);
@@ -125,6 +135,10 @@ body {
       $h: 251px;
       height: $h;
       line-height: $h;
+      padding:0;
+      span {
+            font-size: 24px;
+      }
       @include span-columns($c2 omega,$break1);      
     }
   }
@@ -156,6 +170,10 @@ body {
       $h: 371px;
       height: $h;
       line-height: $h;
+      padding: 0;
+            span {
+            font-size: 32px;
+      }
       @include span-columns($c2 omega,$break2);
     }
   }
@@ -262,14 +280,6 @@ a.slidesjs-next,
     }
 
 
-#msg {
-  @include span-columns(6 omega, 12);
-  vertical-align: middle;
-  text-align: center;
-  .text {
-    font-size: 48px;
-  }
-}
 
 button {
   background-color: #e59843;
