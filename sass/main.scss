@@ -7,7 +7,7 @@ $total-columns  : 4;             // a 12-column grid
 $column-width   : 4em;            // each column is 4em wide
 $gutter-width   : 1em;            // 1em gutters between columns
 $grid-padding   : $gutter-width;  // grid-padding equal to gutters
-$break1: 8;
+$break1: 10;
 $break2: 12;
 
 $content-cols: $total-columns;
@@ -43,31 +43,29 @@ body {
   padding-left: 0;
   padding-right: 0;
 }
-  #header, #footer {
-    margin-bottom: 10px;
-    margin-top: 5px;
-    clear: both;
-    background: $blue;
-    box-shadow:  $default-box-shadow;
-    font-size: 18px;
-    font-weight: bold;
-    a {
-      text-decoration: none;
-    }
-    @include span-columns($total-columns omega,$total-columns);
+#header, #footer {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  clear: both;
+  background: $blue;
+  box-shadow:  $default-box-shadow;
+  font-size: 18px;
+  font-weight: bold;
+  a {
+    text-decoration: none;
   }
+  @include span-columns($total-columns omega,$total-columns);
+}
 
-  #footer {
-    margin: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    box-shadow:  $default-box-shadow;
-    text-align: center;
-    font-weight: normal;
-    font-size: 12px;
-    color: $white;
-  }
-// }
+#footer {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow:  $default-box-shadow;
+  text-align: center;
+  font-weight: normal;
+  font-size: 12px;
+  color: $white;
+}
 
 #logo svg, #kickstarter svg {
   margin: 5px;
@@ -76,7 +74,14 @@ body {
 #kickstarter {
   text-align: right;
 }
-
+#msg  {
+  text-align: center;
+  span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;  
+  }
+}
 // Layout
 #content {
   @include span-columns($total-columns,$total-columns);
@@ -96,8 +101,8 @@ body {
     padding-left: $grid-padding;
     padding-right: $grid-padding;
   }
-  $c1: 4;
-  $c2: 4;
+  $c1: 5;
+  $c2: 5;
   #header {
     @include span-columns($break1,$break1);
     #logo {
@@ -141,6 +146,7 @@ body {
       @include span-columns($c1, $break2);
     }
     #msg {
+      vertical-align: middle;
       @include span-columns($c2 omega,$break2);
     }
   }
@@ -249,10 +255,10 @@ a.slidesjs-next,
 
 #msg {
   @include span-columns(6 omega, 12);
-  vertical-align: top;
+  vertical-align: middle;
   text-align: center;
   .text {
-    font-size: 24px;
+    font-size: 48px;
   }
 }
 

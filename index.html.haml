@@ -21,8 +21,9 @@
           %img(src='images/slides/1.jpg')
           %img(src='images/slides/2.jpg')
         #msg
-          Create your own CritterKin iPhone skin characters with multicolor
-          paper skins and self-adhesive details.
+          %span
+            Create your own CritterKin iPhone skin characters with multicolor
+            paper skins and self-adhesive details.
       #footer
         .center &copy; Copyright 2013,  Turaro, LLC, and CritterKins. All Rights Reserved.
     %script(type="text/javascript")
@@ -41,3 +42,13 @@
           }
         });
       });
+      $(function() {
+        var h = $('#slides').css('height');
+        if (parseInt(h) > 275) {
+          console.log(h);
+          $('#msg').css('height', h).css('line-height',h);
+        } else {
+          $('#msg').css('padding-top', '20px').css('padding-bottom','20px');
+        }
+      });
+
