@@ -1,0 +1,77 @@
+/*
+Syntax error: File to import not found or unreadable: 960/grid.
+              Load paths:
+                /Users/angel/src/critterks/sass
+                /Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets
+                /Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets
+                /Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/susy-1.0.8/sass
+                /Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/bourbon-compass-3.1.6/stylesheets
+                /Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.4/stylesheets
+                Compass::SpriteImporter
+        on line 7 of /Users/angel/src/critterks/sass/grid.scss
+
+Backtrace:
+/Users/angel/src/critterks/sass/grid.scss:7
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/import_node.rb:45:in `import'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:217:in `visit_import'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/tree/root_node.rb:20:in `render'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/engine.rb:315:in `_render'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/engine.rb:262:in `render'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `block in compile'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `block in run'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `call'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `run_callback'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/path.rb:55:in `callback_action'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/path.rb:35:in `update'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/state/directory.rb:39:in `block in modified'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `each'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `modified'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/state/directory.rb:18:in `refresh'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `block (2 levels) in run'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `each'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `block in run'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:15:in `loop'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:15:in `run'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/monitor.rb:26:in `run'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/fssm-0.2.10/lib/fssm.rb:70:in `monitor'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:30:in `block in <top (required)>'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:44:in `call'
+/Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/bin/compass:44:in `<top (required)>'
+/Users/angel/.rbenv/versions/1.9.3-p392/bin/compass:23:in `load'
+/Users/angel/.rbenv/versions/1.9.3-p392/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: 960/grid.\A               Load paths:\A                 /Users/angel/src/critterks/sass\A                 /Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets\A                 /Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets\A                 /Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/susy-1.0.8/sass\A                 /Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/bourbon-compass-3.1.6/stylesheets\A                 /Users/angel/.rbenv/versions/1.9.3-p392/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.4/stylesheets\A                 Compass::SpriteImporter\A         on line 7 of /Users/angel/src/critterks/sass/grid.scss"; }

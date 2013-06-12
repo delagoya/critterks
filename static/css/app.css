@@ -1,16 +1,16 @@
 /* line 9, ../../sass/app.scss */
-body { background-image: url('../images/swatches/white.jpg?1359254727'); font-family: "Helvetica Neue", Helvetica, serif; }
+body { background-image: url('../images/swatches/white.jpg?1371048770'); font-family: "Helvetica Neue", Helvetica, serif; }
 
 /* line 18, ../../sass/app.scss */
-#container { -webkit-box-shadow: 1px 1px 5px #888888; -moz-box-shadow: 1px 1px 5px #888888; box-shadow: 1px 1px 5px #888888; background-image: url('../images/swatches/cream.jpg?1358614968'); }
+#container { -webkit-box-shadow: 1px 1px 5px #888888; -moz-box-shadow: 1px 1px 5px #888888; box-shadow: 1px 1px 5px #888888; background-image: url('../images/swatches/cream.jpg?1371048770'); }
 
 /* line 23, ../../sass/app.scss */
-#header { -webkit-box-shadow: 1px 1px 5px #888888; -moz-box-shadow: 1px 1px 5px #888888; box-shadow: 1px 1px 5px #888888; margin-top: 10px; margin-bottom: 25px; background-image: url('../images/swatches/blue.jpg?1358614968'); font-size: 18px; font-weight: bold; padding-top: 5px; padding-bottom: 5px; }
+#header { -webkit-box-shadow: 1px 1px 5px #888888; -moz-box-shadow: 1px 1px 5px #888888; box-shadow: 1px 1px 5px #888888; margin-top: 10px; margin-bottom: 25px; background-image: url('../images/swatches/blue.jpg?1371048770'); font-size: 18px; font-weight: bold; padding-top: 5px; padding-bottom: 5px; }
 /* line 32, ../../sass/app.scss */
 #header a { text-decoration: none; }
 
 /* line 37, ../../sass/app.scss */
-#footer { background-image: url('../images/swatches/blue.jpg?1358614968'); -webkit-box-shadow: 1px 1px 5px #888888; -moz-box-shadow: 1px 1px 5px #888888; box-shadow: 1px 1px 5px #888888; text-align: center; font-weight: normal; font-size: 10px; margin-top: 10px; margin-bottom: 10px; padding-top: 5px; padding-bottom: 5px; color: #fdfdf9; }
+#footer { background-image: url('../images/swatches/blue.jpg?1371048770'); -webkit-box-shadow: 1px 1px 5px #888888; -moz-box-shadow: 1px 1px 5px #888888; box-shadow: 1px 1px 5px #888888; text-align: center; font-weight: normal; font-size: 10px; margin-top: 10px; margin-bottom: 10px; padding-top: 5px; padding-bottom: 5px; color: #fdfdf9; }
 
 /* line 61, ../../sass/app.scss */
 #graphic, #info { padding: 3px; height: 440px; background: #899d4e; }
